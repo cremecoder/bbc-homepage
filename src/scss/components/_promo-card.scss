@@ -1,0 +1,75 @@
+/* Card styles */
+.promo-card--lg {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  & > * {
+    flex-basis: 100%;
+  }
+
+  .promo-card--text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: clamp(0.5rem, 0.75rem, 1rem);
+  }
+}
+
+.promo-link {
+  color: var(--clr-neutral-700);
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+  }
+  &:hover {
+    color: var(--clr-active);
+    text-decoration: underline;
+  }
+}
+
+.styled-link {
+  color: var(--clr-neutral-700);
+  & > * {
+    &::after {
+      content: "    >";
+    }
+  }
+  &:hover {
+    color: var(--clr-active);
+    text-decoration: underline;
+  }
+}
+
+.promo-card--sm {
+  display: flex;
+  justify-content: space-between;
+
+  & > * {
+    flex-basis: 100%;
+  }
+
+  .promo-card--text {
+    position: relative;
+    // overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: clamp(0.5rem, 0.75rem, 1rem);
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .promo-card--sm {
+    flex-direction: column;
+  }
+}

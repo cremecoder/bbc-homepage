@@ -1,0 +1,6 @@
+@use '../abstracts/mixins' as mix;
+
+/* Utility to control width of elements inside header, main and footer*/
+.container {
+  @include mix.container;
+}

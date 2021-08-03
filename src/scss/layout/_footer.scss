@@ -1,0 +1,29 @@
+/* Footer contains a grid for the vids and columns for the bbc links*/
+footer {
+  color: var(--clr-neutral-100);
+  .#{&}-cols {
+    border-top: 1px solid var(--clr-neutral-500);
+    border-bottom: 1px solid var(--clr-neutral-500);
+    margin: clamp(1rem, 1.25rem, 1.5rem) 0;
+    padding: 3rem;
+    columns: 5.8rem auto;
+    column-rule: 1px solid var(--clr-neutral-500);
+    gap: 1.5rem;
+    font-weight: var(--fw-800);
+
+    & > * {
+      padding: 0.75rem 0;
+    }
+  }
+
+  .#{&}-links {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+    font-weight: var(--fw-800);
+
+    & > * {
+      padding: 0.75rem;
+    }
+  }
+}

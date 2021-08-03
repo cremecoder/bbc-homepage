@@ -1,0 +1,76 @@
+@use '../abstracts/colors' as clr;
+@use '../abstracts/typography' as typ;
+
+/* Set custom properties and core root defaults */
+:root {
+  @each $color, $value in clr.$colors {
+    --clr-#{$color}: #{$value};
+  }
+
+  --ff-primary: "Martel Sans", sans-serif;
+  --fw-500: 500;
+  --fw-800: 800;
+}
+
+/* Box sizing and margin, padding resets */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Core body styles - bg color, font-family and type spacing/height */
+body {
+  line-height: 1.5;
+  letter-spacing: -0.5px;
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-500);
+}
+
+/* Font weights */
+h1,
+h2,
+h3,
+strong {
+  font-weight: var(--fw-800);
+}
+
+/* Remove list styles on ul and add inheritance for fonts and color*/
+li {
+  list-style: none;
+}
+
+/* A elements get default styles and inherit font and color */
+a {
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img {
+  width: 100%;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Utility classes for text sizes */
+@each $font-size, $values in typ.$font-sizes {
+  .#{$font-size} {
+    font-size: clamp(#{nth($values, 1), nth($values, 2), nth($values, 3)});
+    @if $font-size == text-xl or $font-size == text-lg {
+      line-height: 1.2;
+    }
+  }
+}
+
+/* Color and BG color classes from root */
+@each $color, $value in clr.$colors {
+  .bg-#{$color} {
+    background-color: var(--clr-#{$color});
+  }
+  .clr-#{$color} {
+    color: var(--clr-#{$color});
+  }
+}

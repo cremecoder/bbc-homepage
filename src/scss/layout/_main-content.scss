@@ -1,0 +1,29 @@
+/* Main contains sections */
+.main-content {
+  & > section {
+    padding: 1rem 0.5rem;
+  }
+
+  h2 {
+    padding: clamp(0.5rem, 0.75rem, 1rem) 0;
+  }
+}
+
+/* Breakpoints for section BG images */
+@media only screen and (min-width: 600px) {
+  .main-content {
+    & > :nth-child(2) {
+      background: url("https://ichef.bbci.co.uk/news/900/cpsprodpb/1e8d/live/eb5d65a0-9a06-11eb-8fc8-e522bf1d9db3.jpg");
+      background-size: cover;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .main-content {
+    & > :nth-child(2) {
+      background: url("https://ichef.bbci.co.uk/news/1536/cpsprodpb/1e8d/live/eb5d65a0-9a06-11eb-8fc8-e522bf1d9db3.jpg");
+      background-size: cover;
+    }
+  }
+}
