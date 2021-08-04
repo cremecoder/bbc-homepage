@@ -59,6 +59,7 @@ img {
 @each $font-size, $values in typ.$font-sizes {
   .#{$font-size} {
     font-size: clamp(#{nth($values, 1), nth($values, 2), nth($values, 3)});
+    padding: 0.25em 0.15em;
     @if $font-size == text-xl or $font-size == text-lg {
       line-height: 1.2;
     }

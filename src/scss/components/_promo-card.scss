@@ -37,6 +37,13 @@
     color: var(--clr-active);
     text-decoration: underline;
   }
+
+  &--light {
+    color: var(--clr-neutral-300);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .styled-link {
