@@ -1,22 +1,14 @@
 .banner {
-  height: 95vh;
-
-  #{&}-img {
-    height: 60%;
-    background-image: url("https://ichef.bbci.co.uk/live-experience/cps/960/cpsprodpb/37A3/production/_119634241_buffy-proms_300721_getty.jpg");
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+  height: 70vh;
+  background: linear-gradient(rgba(0, 0, 0, 0) 30%, var(--clr-banner) 50%),
+    url("https://ichef.bbci.co.uk/live-experience/cps/960/cpsprodpb/37A3/production/_119634241_buffy-proms_300721_getty.jpg")
+      no-repeat top center / contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 
   #{&}-text {
-    height: 40%;
     padding: 1rem;
-    background-color: var(--clr-banner);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
   }
 
   #{&}-fill {
@@ -30,7 +22,7 @@
       content: "";
       display: block;
       border: 1px solid var(--clr-neutral-300);
-      width: 60%;
+      width: 10%;
       padding: 0.05em 0;
       margin: 0.5em 0;
       background-color: var(--clr-neutral-300);
@@ -38,54 +30,29 @@
   }
 }
 
-// .banner {
-//   height: 60vh;
-//   background: linear-gradient(rgba(0, 0, 0, 0), var(--clr-banner) 60%),
-//     url("https://ichef.bbci.co.uk/live-experience/cps/960/cpsprodpb/37A3/production/_119634241_buffy-proms_300721_getty.jpg")
-//       no-repeat top center / contain;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: flex-end;
-//   align-items: flex-start;
+@media only screen and (min-width: 600px) {
+  .banner {
+    height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, 0) 40%, var(--clr-banner) 60%),
+      url("https://ichef.bbci.co.uk/live-experience/cps/960/cpsprodpb/37A3/production/_119634241_buffy-proms_300721_getty.jpg")
+        no-repeat top center / contain;
+  }
+}
 
-//   #{&}-fill {
-//     background-color: var(--clr-neutral-300);
-//     padding: 0.1em;
-//     font-weight: var(--fw-800);
-//   }
+@media only screen and (min-width: 900px) {
+  .banner {
+    height: 70vh;
+    background: linear-gradient(
+        to left,
+        rgba(0, 0, 0, 0) 40%,
+        var(--clr-banner) 60%
+      ),
+      url("https://ichef.bbci.co.uk/live-experience/cps/960/cpsprodpb/37A3/production/_119634241_buffy-proms_300721_getty.jpg")
+        no-repeat 25vw center / contain;
+    justify-content: center;
 
-//   #{&}-rule {
-//     &::before {
-//       content: "";
-//       display: block;
-//       border: 1px solid var(--clr-neutral-300);
-//       width: 60%;
-//       padding: 0.05em 0;
-//       margin: 0.5em 0;
-//       background-color: var(--clr-neutral-300);
-//     }
-//   }
-// }
-
-// @media only screen and (min-width: 600px) {
-//   .banner {
-//     height: 70vh;
-//     background: linear-gradient(rgba(0, 0, 0, 0), var(--clr-banner) 80%),
-//       url("https://ichef.bbci.co.uk/live-experience/cps/960/cpsprodpb/37A3/production/_119634241_buffy-proms_300721_getty.jpg")
-//         no-repeat top center / contain;
-//   }
-// }
-
-// @media only screen and (min-width: 900px) {
-//   .banner {
-//     height: 70vh;
-//     background: linear-gradient(
-//         to left,
-//         rgba(0, 0, 0, 0),
-//         var(--clr-banner) 75%
-//       ),
-//       url("https://ichef.bbci.co.uk/live-experience/cps/960/cpsprodpb/37A3/production/_119634241_buffy-proms_300721_getty.jpg")
-//         no-repeat right center / contain;
-//     justify-content: center;
-//   }
-// }
+    #{&}-text {
+      width: 50%;
+    }
+  }
+}
