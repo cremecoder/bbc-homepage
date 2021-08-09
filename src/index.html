@@ -5,505 +5,551 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TEMPLATE</title>
     <link rel="stylesheet" href="scss/main.scss" />
-  </head> 
-  <body> 
+  </head>
+  <body>
     <div id="root" class="bg-neutral-300">
-        <header>
-          <div class="container">
-            <nav class="navbar">
-              <ul class="nav-links">
-                <li>
-                  <a href="#"> BBC </a>
-                </li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Search</a></li>
+      <header class="bg-neutral-100">
+          <nav class="nav">
+            <ul class="nav-links">
+              <li data-index="0" class="nav-item text-sm">
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210.69 60" focusable="false" aria-hidden="true">
+                  <path d="M36.76 33.87c-2.21-.78-3.78-.78-7.12-.78h-5.18v11.79H30c4.28 0 5.61-.25 7.37-1a5.58 5.58 0 002.47-2 4.86 4.86 0 00.85-2.55 5.11 5.11 0 00-.87-3.33 6.31 6.31 0 00-3.06-2.13zM35.25 24.36a5.28 5.28 0 001.51-4.23c-.06-2.62-1.6-5-7.63-5h-4.67v11.21h3.37c3.56 0 6.01-.62 7.42-1.98z"></path>
+                  <path d="M0 0v60h63.76V0zm46.69 45.76a11.33 11.33 0 01-5.3 4.24 22.16 22.16 0 01-8.89 1.64H16.72V8.41h12.21a22.73 22.73 0 019 1.44 11.34 11.34 0 014.94 4 9.73 9.73 0 011.8 5.93c0 4.09-1.77 6.94-5.51 8.86a13.9 13.9 0 016.74 3.92 10.42 10.42 0 012.71 7.32 10.86 10.86 0 01-1.92 5.88zM110.22 33.87c-2.21-.78-3.78-.78-7.12-.78h-5.17v11.79h5.5c4.28 0 5.62-.25 7.37-1a5.53 5.53 0 002.47-2 4.69 4.69 0 00.85-2.55 5 5 0 00-.84-3.35 6.22 6.22 0 00-3.06-2.11zM108.71 24.36a5.24 5.24 0 001.51-4.23c-.06-2.62-1.59-5-7.62-5h-4.67v11.21h3.37c3.56 0 6.01-.62 7.41-1.98z"></path>
+                  <path d="M73.46 0v60h63.76V0zm46.69 45.76a11.35 11.35 0 01-5.29 4.24 22.16 22.16 0 01-8.86 1.63H90.19V8.41h12.21a22.73 22.73 0 019 1.44 11.31 11.31 0 014.93 4 9.67 9.67 0 011.8 5.93c.06 4.09-1.76 6.94-5.51 8.86a13.86 13.86 0 016.74 3.92 10.38 10.38 0 012.71 7.32 10.78 10.78 0 01-1.92 5.88zM146.93 0v60h63.76V0zM198 48.24a36.9 36.9 0 01-8.07 3 38.19 38.19 0 01-8.6.93 28.11 28.11 0 01-12.73-2.8 22.06 22.06 0 01-8.73-7.84 20.39 20.39 0 01-3.35-11.13 21.92 21.92 0 013.4-11.71 23 23 0 019-8A28.39 28.39 0 01182 7.86a35.63 35.63 0 017.52 1 58.32 58.32 0 018 2.65v8A40.05 40.05 0 00189.8 16a28.65 28.65 0 00-7.39-1.28 19.92 19.92 0 00-9 1.7 15.8 15.8 0 00-6.57 5.51 14.64 14.64 0 006.46 21.71 21.75 21.75 0 009.09 1.65 26.09 26.09 0 007.1-1.2 34.81 34.81 0 008.5-4z"></path>
+                  </svg>
+                </a>
+              </li>
+              <li data-index="1" class="nav-item text-sm"><a href="#"><svg viewBox="0 0 32 32" class="icon" focusable="false" aria-hidden="true">
+                <path d="M16 23c-3.3 0-5.8-2.5-5.8-5.8s2.5-5.8 5.8-5.8c3.2 0 5.8 2.5 5.8 5.8S19.2 23 16 23zm15-5.7c0-8.4-6.6-15-15-15-8.5 0-15 6.6-15 15 0 5.2 2.5 9.8 6.4 12.4 1.9-2.8 5-4.6 8.6-4.6s6.7 1.8 8.6 4.6C28.5 27 31 22.5 31 17.3z">
+                </path>
+                </svg><span>Sign In</span></a></li>
+              <li data-index="2" class="nav-item text-sm"><a href="#"><svg viewBox="0 0 32 32" class="icon" focusable="false" aria-hidden="true">
+                <path d="M12.9 30.2c.8.9 1.8 1.3 3.1 1.3s2.3-.4 3.1-1.3c.8-.9 1.2-1.9 1.2-3h-8.5c0 1.1.3 2.2 1.1 3zm16-8.8c-1.4-.2-2.4-.6-3.1-1.3-.6-.7-1-1.7-1-3.1v-4c0-2.2-.6-4.1-1.8-5.5-1.2-1.5-2.8-2.4-5-2.8V.5h-4.4v4.1C11.7 5.1 10 6 8.8 7.5 7.7 8.9 7.1 10.8 7.1 13v3.9c0 1.4-.3 2.4-.9 3.1-.6.7-1.7 1.1-3.1 1.3l-1.5.2v3h28.9v-3l-1.6-.1z">
+                </path>
+                </svg></a></li>
+              <li data-index="3" class="nav-item text-sm"><a href="#"><span>Home</span></a></li>
+              <li data-index="4" class="nav-item text-sm"><a href="#"><span>News</span></a></li>
+              <li data-index="5" class="nav-item text-sm"><a href="#"><span>Sport</span></a></li>
+              <li data-index="6" class="nav-item text-sm"><a href="#"><span>Weather</span></a></li>
+              <li data-index="7" class="nav-item text-sm"><a href="#"><span>iPlayer</span></a></li>
+              <li data-index="8" class="nav-item text-sm"><a href="#"><span>Sounds</span></a></li>
+              <li data-index="9" class="nav-item text-sm"><a href="#"><span>CBBC</span></a></li>
+              <li data-index="10" class="nav-item text-sm"><a href="#"><span>CBeebies</span></a></li>
+              <li data-index="11" class="nav-item text-sm"><a href="#"><span>More</span><svg viewBox="0 0 32 32" class="icon" focusable="false" aria-hidden="true">
+              <path d="M26.7 12.6L16 23.2 5.3 12.6V8.8h21.4v3.8z"></path>
+                </svg></a></li>
+              <li data-index="12" class="nav-item text-sm"><a href="#"><svg viewBox="0 0 32 32" class="icon" focusable="false" aria-hidden="true">
+                <path d="M13 24.3c6.5 0 11.7-5.1 11.7-11.7S19.6 1 13 1 1.4 6.1 1.4 12.7 6.5 24.3 13 24.3zm0-2.6c-5.1 0-9-3.9-9-9.1s3.9-9.1 9-9.1 9 3.9 9 9.1-3.9 9.1-9 9.1zm5.8.4l8.9 8.9 2.9-2.9-8.9-8.9-2.9 2.9z">
+                </path>
+                </svg><span>Search</span></a></li>
               </ul>
+              <div class="nav-hidden">
+                <a href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                  <span class="visually-hidden">More</span>
+                  <span aria-hidden="true">More</span>
+                </a>
+              </div>
             </nav>
-            <h1 class="text-xl clr-neutral-700">Welcome to the BBC</h1>
-          </div>
+            <div class="container">
+              <h1 class="text-xl clr-neutral-700">Welcome to the BBC</h1>
+            </div>
         </header>
-        <main class="main-content">
-          <!-- Featured - No title -->
-          <section>
-           <div class="container">
-            <div class="grid--featured">
-              <div class="promo-card--lg">
-                <div>
-                  <img
-                    alt="Boris Johnson"
-                    srcset="
-                      https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/152B3/production/_118570768_mediaitem118570767.jpg 480w,
-                      https://ichef.bbci.co.uk/live-experience/cps/800/cpsprodpb/152B3/production/_118570768_mediaitem118570767.jpg 800w,
-                      https://ichef.bbci.co.uk/live-experience/cps/960/cpsprodpb/152B3/production/_118570768_mediaitem118570767.jpg 960w
-                    "
-                    src="https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/152B3/production/_118570768_mediaitem118570767.jpg"
-                    sizes="(max-width: 399px) 480px, (max-width: 1279px) 800px, 960px"
-                    width="240"
-                    height="135"
-                    loading="eager"
-                  />
-                </div>
-               <div class="promo-card--text">
+    <main class="main-content">
+      <!-- Featured - No title -->
+      <section>
+        <div class="container">
+          <div class="grid--featured">
+            <div class="promo-card--lg">
+              <div>
+                <img
+                  alt="Boris Johnson"
+                  srcset="
+                    https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/152B3/production/_118570768_mediaitem118570767.jpg 480w,
+                    https://ichef.bbci.co.uk/live-experience/cps/800/cpsprodpb/152B3/production/_118570768_mediaitem118570767.jpg 800w,
+                    https://ichef.bbci.co.uk/live-experience/cps/960/cpsprodpb/152B3/production/_118570768_mediaitem118570767.jpg 960w
+                  "
+                  src="https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/152B3/production/_118570768_mediaitem118570767.jpg"
+                  sizes="(max-width: 399px) 480px, (max-width: 1279px) 800px, 960px"
+                  width="240"
+                  height="135"
+                  loading="eager"
+                />
+              </div>
+              <div class="promo-card--text">
                 <a href="#" class="promo-link">
-                  <h1 class="text-xl"> 
+                  <h1 class="text-xl">
                     Too soon to decide on roadmap changes, PM says
                   </h1>
                 </a>
                 <span class="text-sm clr-neutral-700">UK</span>
-               </div>
-              </div>
-              <!-- -->
-              <div class="promo-card--lg">
-                <div>
-                  <img
-                    alt="Woman with computer and piggy bank"
-                    srcset="
-                      https://ichef.bbci.co.uk/live-experience/cps/240/cpsprodpb/0B4B/production/_110019820_onlinesave_getty.jpg 240w,
-                      https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/0B4B/production/_110019820_onlinesave_getty.jpg 480w
-                    "
-                    src="https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/0B4B/production/_110019820_onlinesave_getty.jpg"
-                    sizes="(max-width: 399px) 240px, 480px"
-                    width="240"
-                    height="135"
-                    loading="eager"
-                  />
-                </div>
-                <div class="promo-card--text">
-                  <a href="#" class="promo-link">
-                    <h3 class="text-md">
-                      Accidental savers 'to stay prudent' after lockdown
-                    </h3>
-                  </a>
-                  <span class="text-sm clr-neutral-700">Business</span>
-                </div>
-              </div>
-              <!-- -->
-              <div class="promo-card--lg">
-                <div>
-                  <img
-                    alt="Weather app on a phone"
-                    srcset="
-                      https://ichef.bbci.co.uk/live-experience/cps/240/cpsprodpb/96EC/production/_118563683_gettyimages-1090899168.jpg 240w,
-                      https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/96EC/production/_118563683_gettyimages-1090899168.jpg 480w
-                    "
-                    src="https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/96EC/production/_118563683_gettyimages-1090899168.jpg"
-                    sizes="(max-width: 399px) 240px, 480px"
-                    width="240"
-                    height="135"
-                    loading="eager"
-                  />
-                </div>
-                <div class="promo-card--text">
-                  <a href="#" class="promo-link">
-                    <h3 class="text-md">
-                      Why is my weather app struggling with May showers?
-                    </h3>
-                  </a>
-                  <span class="text-sm clr-neutral-700">Northern Ireland</span>
-                </div>
               </div>
             </div>
-           </div>
-          </section>
-  
-          <!-- Category - No link -->
-          <section>
-            <div class="container">
-              <h2 class="text-lg clr-neutral-700">More top stories</h2>
-            <div class="grid--category">
-              <div class="promo-card--sm">
-                <div>
-                  <img
-                    alt="Demi Lovato"
-                    srcset="
-                      https://ichef.bbci.co.uk/live-experience/cps/320/cpsprodpb/18502/production/_118568599_demisinging976.jpg 320w,
-                      https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/18502/production/_118568599_demisinging976.jpg 480w,
-                      https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/18502/production/_118568599_demisinging976.jpg 624w
-                    "
-                    src="https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/18502/production/_118568599_demisinging976.jpg"
-                    sizes="(max-width: 399px) 320px, (max-width: 1279px) 480px, 624px"
-                    width="240"
-                    height="135"
-                    loading="eager"
-                  />
-                </div>
-                <div class="promo-card--text">
-                  <a href="#" class="promo-link"
+            <!-- -->
+            <div class="promo-card--lg">
+              <div>
+                <img
+                  alt="Woman with computer and piggy bank"
+                  srcset="
+                    https://ichef.bbci.co.uk/live-experience/cps/240/cpsprodpb/0B4B/production/_110019820_onlinesave_getty.jpg 240w,
+                    https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/0B4B/production/_110019820_onlinesave_getty.jpg 480w
+                  "
+                  src="https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/0B4B/production/_110019820_onlinesave_getty.jpg"
+                  sizes="(max-width: 399px) 240px, 480px"
+                  width="240"
+                  height="135"
+                  loading="eager"
+                />
+              </div>
+              <div class="promo-card--text">
+                <a href="#" class="promo-link">
+                  <h3 class="text-md">
+                    Accidental savers 'to stay prudent' after lockdown
+                  </h3>
+                </a>
+                <span class="text-sm clr-neutral-700">Business</span>
+              </div>
+            </div>
+            <!-- -->
+            <div class="promo-card--lg">
+              <div>
+                <img
+                  alt="Weather app on a phone"
+                  srcset="
+                    https://ichef.bbci.co.uk/live-experience/cps/240/cpsprodpb/96EC/production/_118563683_gettyimages-1090899168.jpg 240w,
+                    https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/96EC/production/_118563683_gettyimages-1090899168.jpg 480w
+                  "
+                  src="https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/96EC/production/_118563683_gettyimages-1090899168.jpg"
+                  sizes="(max-width: 399px) 240px, 480px"
+                  width="240"
+                  height="135"
+                  loading="eager"
+                />
+              </div>
+              <div class="promo-card--text">
+                <a href="#" class="promo-link">
+                  <h3 class="text-md">
+                    Why is my weather app struggling with May showers?
+                  </h3>
+                </a>
+                <span class="text-sm clr-neutral-700">Northern Ireland</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Category - No link -->
+      <section>
+        <div class="container">
+          <h2 class="text-lg clr-neutral-700">More top stories</h2>
+          <div class="grid--category">
+            <div class="promo-card--sm">
+              <div>
+                <img
+                  alt="Demi Lovato"
+                  srcset="
+                    https://ichef.bbci.co.uk/live-experience/cps/320/cpsprodpb/18502/production/_118568599_demisinging976.jpg 320w,
+                    https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/18502/production/_118568599_demisinging976.jpg 480w,
+                    https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/18502/production/_118568599_demisinging976.jpg 624w
+                  "
+                  src="https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/18502/production/_118568599_demisinging976.jpg"
+                  sizes="(max-width: 399px) 320px, (max-width: 1279px) 480px, 624px"
+                  width="240"
+                  height="135"
+                  loading="eager"
+                />
+              </div>
+              <div class="promo-card--text">
+                <a href="#" class="promo-link"
                   ><h3 class="text-md">
                     Demi Lovato is non-binary and has changed pronouns
                   </h3></a
                 >
                 <span class="text-sm clr-neutral-700">Newsbeat</span>
-                </div>
               </div>
-              <!--  -->
-              <div class="promo-card--sm">
-                <div>
-                  <img
-                    alt="Aerial view of King's College Chapel"
-                    srcset="
-                      https://ichef.bbci.co.uk/live-experience/cps/320/cpsprodpb/10E56/production/_118560296_723c9811-5b1c-487b-8b1f-ee89a20dd5a1.jpg 320w,
-                      https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/10E56/production/_118560296_723c9811-5b1c-487b-8b1f-ee89a20dd5a1.jpg 480w,
-                      https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/10E56/production/_118560296_723c9811-5b1c-487b-8b1f-ee89a20dd5a1.jpg 624w
-                    "
-                    src="https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/10E56/production/_118560296_723c9811-5b1c-487b-8b1f-ee89a20dd5a1.jpg"
-                    sizes="(max-width: 399px) 320px, (max-width: 1279px) 480px, 624px"
-                    width="240"
-                    height="135"
-                    loading="eager"
-                  />
-                </div>
-                <div class="promo-card--text">
-                  <a href="#" class="promo-link"
+            </div>
+            <!--  -->
+            <div class="promo-card--sm">
+              <div>
+                <img
+                  alt="Aerial view of King's College Chapel"
+                  srcset="
+                    https://ichef.bbci.co.uk/live-experience/cps/320/cpsprodpb/10E56/production/_118560296_723c9811-5b1c-487b-8b1f-ee89a20dd5a1.jpg 320w,
+                    https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/10E56/production/_118560296_723c9811-5b1c-487b-8b1f-ee89a20dd5a1.jpg 480w,
+                    https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/10E56/production/_118560296_723c9811-5b1c-487b-8b1f-ee89a20dd5a1.jpg 624w
+                  "
+                  src="https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/10E56/production/_118560296_723c9811-5b1c-487b-8b1f-ee89a20dd5a1.jpg"
+                  sizes="(max-width: 399px) 320px, (max-width: 1279px) 480px, 624px"
+                  width="240"
+                  height="135"
+                  loading="eager"
+                />
+              </div>
+              <div class="promo-card--text">
+                <a href="#" class="promo-link"
                   ><h3 class="text-md">
                     Record number of BAME Cambridge admissions
                   </h3></a
                 >
                 <span class="text-sm clr-neutral-700">Cambridgeshire</span>
-                </div>
               </div>
-              <!--  -->
-              <div class="promo-card--sm">
-                <div>
-                  <img
-                    alt="A young woman puts on her seatbelt in driving seat"
-                    srcset="
-                      https://ichef.bbci.co.uk/live-experience/cps/320/cpsprodpb/14CF8/production/_118504258_car-finace_160521_getty.jpg 320w,
-                      https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/14CF8/production/_118504258_car-finace_160521_getty.jpg 480w,
-                      https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/14CF8/production/_118504258_car-finace_160521_getty.jpg 624w
-                    "
-                    src="https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/14CF8/production/_118504258_car-finace_160521_getty.jpg"
-                    sizes="(max-width: 399px) 320px, (max-width: 1279px) 480px, 624px"
-                    width="240"
-                    height="135"
-                    loading="eager"
-                  />
-                </div>
-                <div class="promo-card--text">
-                  <a href="#" class="promo-link"
+            </div>
+            <!--  -->
+            <div class="promo-card--sm">
+              <div>
+                <img
+                  alt="A young woman puts on her seatbelt in driving seat"
+                  srcset="
+                    https://ichef.bbci.co.uk/live-experience/cps/320/cpsprodpb/14CF8/production/_118504258_car-finace_160521_getty.jpg 320w,
+                    https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/14CF8/production/_118504258_car-finace_160521_getty.jpg 480w,
+                    https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/14CF8/production/_118504258_car-finace_160521_getty.jpg 624w
+                  "
+                  src="https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/14CF8/production/_118504258_car-finace_160521_getty.jpg"
+                  sizes="(max-width: 399px) 320px, (max-width: 1279px) 480px, 624px"
+                  width="240"
+                  height="135"
+                  loading="eager"
+                />
+              </div>
+              <div class="promo-card--text">
+                <a href="#" class="promo-link"
                   ><h3 class="text-md">
                     Five things to know about financing a car
                   </h3></a
                 >
                 <span class="text-sm clr-neutral-700">BBC One</span>
-                </div>
               </div>
             </div>
-            </div>
-          </section>
-  
-          <!-- Category -->
-          <section>
-            <div class="container">
-              <a href="#" class="styled-link"><h2 class="text-lg">Coronavirus pandemic</h2></a>
-              <div class="grid--category">
-                <div class="promo-card--sm">
-                  <div>
-                    <img
-                      alt="Emily Nicole Roberts"
-                      srcset="
-                        https://ichef.bbci.co.uk/live-experience/cps/320/cpsprodpb/121A2/production/_118564147_p09hykcc.jpg 320w,
-                        https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/121A2/production/_118564147_p09hykcc.jpg 480w,
-                        https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/121A2/production/_118564147_p09hykcc.jpg 624w
-                      "
-                      src="https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/121A2/production/_118564147_p09hykcc.jpg"
-                      sizes="(max-width: 399px) 320px, (max-width: 1279px) 480px, 624px"
-                      width="240"
-                      height="135"
-                      loading="eager"
-                    />
-                  </div>
-                  <div class="promo-card--text">
-                    <a href="#" class="promo-link"
-                    ><h3 class="text-md">
-                      Are city centres less accessible after Covid?
-                    </h3></a
-                  >
-                  <span class="text-sm clr-neutral-700">Wales</span>
-                  </div>
-                </div>
-                <!--  -->
-                <div class="promo-card--sm">
-                  <div>
-                    <img
-                      alt="Boris Johnson and Jenny McGee"
-                      srcset="
-                        https://ichef.bbci.co.uk/live-experience/cps/320/cpsprodpb/2856/production/_118562301_mediaitem118562300.jpg 320w,
-                        https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/2856/production/_118562301_mediaitem118562300.jpg 480w,
-                        https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/2856/production/_118562301_mediaitem118562300.jpg 624w
-                      "
-                      src="https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/2856/production/_118562301_mediaitem118562300.jpg"
-                      sizes="(max-width: 399px) 320px, (max-width: 1279px) 480px, 624px"
-                      width="240"
-                      height="135"
-                      loading="eager"
-                    />
-                  </div>
-                  <div class="promo-card--text">
-                    <a href="#" class="promo-link"
-                    ><h3 class="text-md">
-                      Nurse who cared for PM resigns from NHS
-                    </h3></a
-                  >
-                  <span class="text-sm clr-neutral-700">UK</span>
-                  </div>
-                </div>
-                <!--  -->
-                <div class="promo-card--sm">
-                  <div>
-                    <img
-                      alt="Ambulances"
-                      srcset="
-                        https://ichef.bbci.co.uk/live-experience/cps/320/cpsprodpb/6F82/production/_118564582_mediaitem118564581.jpg 320w,
-                        https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/6F82/production/_118564582_mediaitem118564581.jpg 480w,
-                        https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/6F82/production/_118564582_mediaitem118564581.jpg 624w
-                      "
-                      src="https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/6F82/production/_118564582_mediaitem118564581.jpg"
-                      sizes="(max-width: 399px) 320px, (max-width: 1279px) 480px, 624px"
-                      width="240"
-                      height="135"
-                      loading="eager"
-                    />
-                  </div>
-                  <div class="promo-card--text">
-                    <a href="#" class="promo-link"
-                    ><h3 class="text-md">
-                      Government failed to plan for coronavirus threat - report
-                    </h3></a
-                  >
-                  <span class="text-sm clr-neutral-700">UK Poilitics</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <!-- Banner -->
-          <section>
-           <div class="banner">
-            <div class="container">
-              <div class="banner-text">
-                <span class="text-sm clr-neutral-700 banner-fill">GUESS WHO'S BACK</span>
-                <a href="#" class="promo-link--light"><h1 class="text-xl clr-neutral-300">10 pieces of classical music you didn't know you knew</h1></a>
-                <h3 class="text-md clr-neutral-300">They're hidden in pop culture, from Buffy to The Apprentice</h3>
-                <span class="text-sm clr-neutral-300 banner-rule">BBC Bitesize</span>
-              </div>
-            </div>
-           </div>
-          </section>
-
-          <!-- Featured -->
-          <section>
-            <div class="container">
-              <h2 class="clr-neutral-700">3 things we love today</h2>
-            <div class="grid--featured">
-              <div class="promo-card--lg">
-                <div>
-                  <img
-                    alt="Roundabout"
-                    srcset="
-                      https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/84D7/production/_118570043_roundabout_190521_gt.jpg 480w,
-                      https://ichef.bbci.co.uk/live-experience/cps/800/cpsprodpb/84D7/production/_118570043_roundabout_190521_gt.jpg 800w,
-                      https://ichef.bbci.co.uk/live-experience/cps/960/cpsprodpb/84D7/production/_118570043_roundabout_190521_gt.jpg 960w
-                    "
-                    src="https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/84D7/production/_118570043_roundabout_190521_gt.jpg"
-                    sizes="(max-width: 399px) 480px, (max-width: 1279px) 800px, 960px"
-                    width="240"
-                    height="135"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="promo-card--text">
-                  <a href="#" class="promo-link">
-                    <h1 class="text-xl">
-                      Made-up words that changed the world... and some that didn't
-                    </h1>
-                  </a>
-                  <span class="text-sm clr-neutral-700">England</span>
-                </div>
-              </div>
-              <!-- -->
-              <div class="promo-card--lg">
-                <div>
-                  <img
-                    alt="RHS Bridgewater"
-                    srcset="
-                      https://ichef.bbci.co.uk/live-experience/cps/240/cpsprodpb/67D9/production/_118558562_rhs_180521_bbc.jpg 240w,
-                      https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/67D9/production/_118558562_rhs_180521_bbc.jpg 480w
-                    "
-                    src="https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/67D9/production/_118558562_rhs_180521_bbc.jpg"
-                    sizes="(max-width: 399px) 240px, 480px"
-                    width="240"
-                    height="135"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="promo-card--text">
-                  <a href="#" class="promo-link">
-                    <h3 class="text-md">
-                      RHS opens Europe's 'biggest horticultural project'
-                    </h3>
-                  </a>
-                  <span class="text-sm clr-neutral-700">England</span>
-                </div>
-              </div>
-              <!-- -->
-              <div class="promo-card--lg">
-                <div>
-                  <img
-                    alt="Jupiter seen in infrared light"
-                    srcset="
-                      https://ichef.bbci.co.uk/live-experience/cps/240/cpsprodpb/1030C/production/_118561366_jupiter_180521_cps.jpg 240w,
-                      https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/1030C/production/_118561366_jupiter_180521_cps.jpg 480w
-                    "
-                    src="https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/1030C/production/_118561366_jupiter_180521_cps.jpg"
-                    sizes="(max-width: 399px) 240px, 480px"
-                    width="240"
-                    height="135"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="promo-card--text">
-                  <a href="#" class="promo-link">
-                    <h3 class="text-md">
-                      Planet Jupiter seen in a whole new light
-                    </h3>
-                  </a>
-                  <span class="text-sm clr-neutral-700">Newsround</span>
-                </div>
-              </div>
-            </div>
-            </div>
-          </section>
-        </main>
-  
-      <footer>
-        <div class="container">
-          <h2>Best of BBC Three</h2>
-          <div class="grid--footer">
-            <div class="promo-card--sm">
-              <div>
-                <img
-                  alt=""
-                  srcset="
-                    https://ichef.bbci.co.uk/images/ic/320xn/p09hbs08.jpg 320w,
-                    https://ichef.bbci.co.uk/images/ic/480xn/p09hbs08.jpg 480w,
-                    https://ichef.bbci.co.uk/images/ic/800xn/p09hbs08.jpg 800w
-                  "
-                  sizes="(max-width: 399px) 320px, (max-width: 599px) 480px, (max-width: 899px) 800px, 480px"
-                  width="240"
-                  height="135"
-                  loading="lazy"
-                />
-              </div>
-              <div class="promo-card--text">
-                <a href="#" class="promo-link">
-                  <h3 class="text-md">The wildest weekend of their lives...</h3>
-                </a>
-                <span class="text-sm clr-neutral-700">WILD WEEKENDS</span>
-              </div>
-            </div>
-            <!--  -->
-            <div class="promo-card--sm">
-              <div>
-                <img
-                  alt=""
-                  srcset="
-                    https://ichef.bbci.co.uk/images/ic/320xn/p09hbs08.jpg 320w,
-                    https://ichef.bbci.co.uk/images/ic/480xn/p09hbs08.jpg 480w,
-                    https://ichef.bbci.co.uk/images/ic/800xn/p09hbs08.jpg 800w
-                  "
-                  sizes="(max-width: 399px) 320px, (max-width: 599px) 480px, (max-width: 899px) 800px, 480px"
-                  width="240"
-                  height="135"
-                  loading="lazy"
-                />
-              </div>
-              <div class="promo-card--text">
-                <a href="#" class="promo-link">
-                  <h3 class="text-md">The wildest weekend of their lives...</h3>
-                </a>
-                <span class="text-sm clr-neutral-700">WILD WEEKENDS</span>
-              </div>
-            </div>
-            <!--  -->
-            <div class="promo-card--sm">
-              <div>
-                <img
-                  alt=""
-                  srcset="
-                    https://ichef.bbci.co.uk/images/ic/320xn/p09hbs08.jpg 320w,
-                    https://ichef.bbci.co.uk/images/ic/480xn/p09hbs08.jpg 480w,
-                    https://ichef.bbci.co.uk/images/ic/800xn/p09hbs08.jpg 800w
-                  "
-                  sizes="(max-width: 399px) 320px, (max-width: 599px) 480px, (max-width: 899px) 800px, 480px"
-                  width="240"
-                  height="135"
-                  loading="lazy"
-                />
-              </div>
-              <div class="promo-card--text">
-                <a href="#" class="promo-link">
-                  <h3 class="text-md">The wildest weekend of their lives...</h3>
-                </a>
-                <span class="text-sm clr-neutral-700">WILD WEEKENDS</span>
-              </div>
-            </div>
-            <!--  -->
-            <div class="promo-card--sm">
-              <div>
-                <img
-                  alt=""
-                  srcset="
-                    https://ichef.bbci.co.uk/images/ic/320xn/p09hbs08.jpg 320w,
-                    https://ichef.bbci.co.uk/images/ic/480xn/p09hbs08.jpg 480w,
-                    https://ichef.bbci.co.uk/images/ic/800xn/p09hbs08.jpg 800w
-                  "
-                  sizes="(max-width: 399px) 320px, (max-width: 599px) 480px, (max-width: 899px) 800px, 480px"
-                  width="240"
-                  height="135"
-                  loading="lazy"
-                />
-              </div>
-              <div class="promo-card--text">
-                <a href="#" class="promo-link">
-                  <h3 class="text-md">The wildest weekend of their lives...</h3>
-                </a>
-                <span class="text-sm clr-neutral-700">WILD WEEKENDS</span>
-              </div>
-            </div>
-          </div>
-          <ul class="footer-cols" role="list">
-            <li class="text-sm">Home</li>
-            <li class="text-sm">News</li>
-            <li class="text-sm">Sport</li>
-            <li class="text-sm">Weather</li>
-            <li class="text-sm">iPlayer</li>
-            <li class="text-sm">Sounds</li>
-            <li class="text-sm">CBBC</li>
-            <li class="text-sm">CBeebies</li>
-            <li class="text-sm">Food</li>
-            <li class="text-sm">Bitesize</li>
-            <li class="text-sm">Arts</li>
-            <li class="text-sm">Taster</li>
-            <li class="text-sm">Local</li>
-            <li class="text-sm">Three</li>
-          </ul>
-          <ul class="footer-links" role="list">
-            <li class="text-sm">Terms of Use</li>
-            <li class="text-sm">About the BBC</li>
-            <li class="text-sm">Privacy Poilicy</li>
-            <li class="text-sm">Cookies</li>
-            <li class="text-sm">Accessibility Help</li>
-            <li class="text-sm">Parental Guidance</li>
-            <li class="text-sm">Contact the BBC</li>
-            <li class="text-sm">Get Personalsed Messages</li>
-            <li class="text-sm">Why you can trust the BBC</li>
-          </ul>
-          <div class="footer-copy text-sm">
-            &copy 2021 BBC. The BBC is not responsible for the content of external sites. <strong>Read about our approach to external linking.</strong>
           </div>
         </div>
-      </footer>
+      </section>
+
+      <!-- Category -->
+      <section>
+        <div class="container">
+          <a href="#" class="styled-link"
+            ><h2 class="text-lg">Coronavirus pandemic</h2></a
+          >
+          <div class="grid--category">
+            <div class="promo-card--sm">
+              <div>
+                <img
+                  alt="Emily Nicole Roberts"
+                  srcset="
+                    https://ichef.bbci.co.uk/live-experience/cps/320/cpsprodpb/121A2/production/_118564147_p09hykcc.jpg 320w,
+                    https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/121A2/production/_118564147_p09hykcc.jpg 480w,
+                    https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/121A2/production/_118564147_p09hykcc.jpg 624w
+                  "
+                  src="https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/121A2/production/_118564147_p09hykcc.jpg"
+                  sizes="(max-width: 399px) 320px, (max-width: 1279px) 480px, 624px"
+                  width="240"
+                  height="135"
+                  loading="eager"
+                />
+              </div>
+              <div class="promo-card--text">
+                <a href="#" class="promo-link"
+                  ><h3 class="text-md">
+                    Are city centres less accessible after Covid?
+                  </h3></a
+                >
+                <span class="text-sm clr-neutral-700">Wales</span>
+              </div>
+            </div>
+            <!--  -->
+            <div class="promo-card--sm">
+              <div>
+                <img
+                  alt="Boris Johnson and Jenny McGee"
+                  srcset="
+                    https://ichef.bbci.co.uk/live-experience/cps/320/cpsprodpb/2856/production/_118562301_mediaitem118562300.jpg 320w,
+                    https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/2856/production/_118562301_mediaitem118562300.jpg 480w,
+                    https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/2856/production/_118562301_mediaitem118562300.jpg 624w
+                  "
+                  src="https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/2856/production/_118562301_mediaitem118562300.jpg"
+                  sizes="(max-width: 399px) 320px, (max-width: 1279px) 480px, 624px"
+                  width="240"
+                  height="135"
+                  loading="eager"
+                />
+              </div>
+              <div class="promo-card--text">
+                <a href="#" class="promo-link"
+                  ><h3 class="text-md">
+                    Nurse who cared for PM resigns from NHS
+                  </h3></a
+                >
+                <span class="text-sm clr-neutral-700">UK</span>
+              </div>
+            </div>
+            <!--  -->
+            <div class="promo-card--sm">
+              <div>
+                <img
+                  alt="Ambulances"
+                  srcset="
+                    https://ichef.bbci.co.uk/live-experience/cps/320/cpsprodpb/6F82/production/_118564582_mediaitem118564581.jpg 320w,
+                    https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/6F82/production/_118564582_mediaitem118564581.jpg 480w,
+                    https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/6F82/production/_118564582_mediaitem118564581.jpg 624w
+                  "
+                  src="https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/6F82/production/_118564582_mediaitem118564581.jpg"
+                  sizes="(max-width: 399px) 320px, (max-width: 1279px) 480px, 624px"
+                  width="240"
+                  height="135"
+                  loading="eager"
+                />
+              </div>
+              <div class="promo-card--text">
+                <a href="#" class="promo-link"
+                  ><h3 class="text-md">
+                    Government failed to plan for coronavirus threat - report
+                  </h3></a
+                >
+                <span class="text-sm clr-neutral-700">UK Poilitics</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Banner -->
+      <section>
+        <div class="banner">
+          <div class="container">
+            <div class="banner-text">
+              <span class="text-sm clr-neutral-700 banner-fill"
+                >GUESS WHO'S BACK</span
+              >
+              <a href="#" class="promo-link--light"
+                ><h1 class="text-xl clr-neutral-300">
+                  10 pieces of classical music you didn't know you knew
+                </h1></a
+              >
+              <h3 class="text-md clr-neutral-300">
+                They're hidden in pop culture, from Buffy to The Apprentice
+              </h3>
+              <span class="text-sm clr-neutral-300 banner-rule"
+                >BBC Bitesize</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured -->
+      <section>
+        <div class="container">
+          <h2 class="clr-neutral-700">3 things we love today</h2>
+          <div class="grid--featured">
+            <div class="promo-card--lg">
+              <div>
+                <img
+                  alt="Roundabout"
+                  srcset="
+                    https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/84D7/production/_118570043_roundabout_190521_gt.jpg 480w,
+                    https://ichef.bbci.co.uk/live-experience/cps/800/cpsprodpb/84D7/production/_118570043_roundabout_190521_gt.jpg 800w,
+                    https://ichef.bbci.co.uk/live-experience/cps/960/cpsprodpb/84D7/production/_118570043_roundabout_190521_gt.jpg 960w
+                  "
+                  src="https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/84D7/production/_118570043_roundabout_190521_gt.jpg"
+                  sizes="(max-width: 399px) 480px, (max-width: 1279px) 800px, 960px"
+                  width="240"
+                  height="135"
+                  loading="lazy"
+                />
+              </div>
+              <div class="promo-card--text">
+                <a href="#" class="promo-link">
+                  <h1 class="text-xl">
+                    Made-up words that changed the world... and some that didn't
+                  </h1>
+                </a>
+                <span class="text-sm clr-neutral-700">England</span>
+              </div>
+            </div>
+            <!-- -->
+            <div class="promo-card--lg">
+              <div>
+                <img
+                  alt="RHS Bridgewater"
+                  srcset="
+                    https://ichef.bbci.co.uk/live-experience/cps/240/cpsprodpb/67D9/production/_118558562_rhs_180521_bbc.jpg 240w,
+                    https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/67D9/production/_118558562_rhs_180521_bbc.jpg 480w
+                  "
+                  src="https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/67D9/production/_118558562_rhs_180521_bbc.jpg"
+                  sizes="(max-width: 399px) 240px, 480px"
+                  width="240"
+                  height="135"
+                  loading="lazy"
+                />
+              </div>
+              <div class="promo-card--text">
+                <a href="#" class="promo-link">
+                  <h3 class="text-md">
+                    RHS opens Europe's 'biggest horticultural project'
+                  </h3>
+                </a>
+                <span class="text-sm clr-neutral-700">England</span>
+              </div>
+            </div>
+            <!-- -->
+            <div class="promo-card--lg">
+              <div>
+                <img
+                  alt="Jupiter seen in infrared light"
+                  srcset="
+                    https://ichef.bbci.co.uk/live-experience/cps/240/cpsprodpb/1030C/production/_118561366_jupiter_180521_cps.jpg 240w,
+                    https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/1030C/production/_118561366_jupiter_180521_cps.jpg 480w
+                  "
+                  src="https://ichef.bbci.co.uk/live-experience/cps/480/cpsprodpb/1030C/production/_118561366_jupiter_180521_cps.jpg"
+                  sizes="(max-width: 399px) 240px, 480px"
+                  width="240"
+                  height="135"
+                  loading="lazy"
+                />
+              </div>
+              <div class="promo-card--text">
+                <a href="#" class="promo-link">
+                  <h3 class="text-md">
+                    Planet Jupiter seen in a whole new light
+                  </h3>
+                </a>
+                <span class="text-sm clr-neutral-700">Newsround</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <h2>Best of BBC Three</h2>
+        <div class="grid--footer">
+          <div class="promo-card--sm">
+            <div>
+              <img
+                alt=""
+                srcset="
+                  https://ichef.bbci.co.uk/images/ic/320xn/p09hbs08.jpg 320w,
+                  https://ichef.bbci.co.uk/images/ic/480xn/p09hbs08.jpg 480w,
+                  https://ichef.bbci.co.uk/images/ic/800xn/p09hbs08.jpg 800w
+                "
+                sizes="(max-width: 399px) 320px, (max-width: 599px) 480px, (max-width: 899px) 800px, 480px"
+                width="240"
+                height="135"
+                loading="lazy"
+              />
+            </div>
+            <div class="promo-card--text">
+              <a href="#" class="promo-link">
+                <h3 class="text-md">The wildest weekend of their lives...</h3>
+              </a>
+              <span class="text-sm clr-neutral-700">WILD WEEKENDS</span>
+            </div>
+          </div>
+          <!--  -->
+          <div class="promo-card--sm">
+            <div>
+              <img
+                alt=""
+                srcset="
+                  https://ichef.bbci.co.uk/images/ic/320xn/p09hbs08.jpg 320w,
+                  https://ichef.bbci.co.uk/images/ic/480xn/p09hbs08.jpg 480w,
+                  https://ichef.bbci.co.uk/images/ic/800xn/p09hbs08.jpg 800w
+                "
+                sizes="(max-width: 399px) 320px, (max-width: 599px) 480px, (max-width: 899px) 800px, 480px"
+                width="240"
+                height="135"
+                loading="lazy"
+              />
+            </div>
+            <div class="promo-card--text">
+              <a href="#" class="promo-link">
+                <h3 class="text-md">The wildest weekend of their lives...</h3>
+              </a>
+              <span class="text-sm clr-neutral-700">WILD WEEKENDS</span>
+            </div>
+          </div>
+          <!--  -->
+          <div class="promo-card--sm">
+            <div>
+              <img
+                alt=""
+                srcset="
+                  https://ichef.bbci.co.uk/images/ic/320xn/p09hbs08.jpg 320w,
+                  https://ichef.bbci.co.uk/images/ic/480xn/p09hbs08.jpg 480w,
+                  https://ichef.bbci.co.uk/images/ic/800xn/p09hbs08.jpg 800w
+                "
+                sizes="(max-width: 399px) 320px, (max-width: 599px) 480px, (max-width: 899px) 800px, 480px"
+                width="240"
+                height="135"
+                loading="lazy"
+              />
+            </div>
+            <div class="promo-card--text">
+              <a href="#" class="promo-link">
+                <h3 class="text-md">The wildest weekend of their lives...</h3>
+              </a>
+              <span class="text-sm clr-neutral-700">WILD WEEKENDS</span>
+            </div>
+          </div>
+          <!--  -->
+          <div class="promo-card--sm">
+            <div>
+              <img
+                alt=""
+                srcset="
+                  https://ichef.bbci.co.uk/images/ic/320xn/p09hbs08.jpg 320w,
+                  https://ichef.bbci.co.uk/images/ic/480xn/p09hbs08.jpg 480w,
+                  https://ichef.bbci.co.uk/images/ic/800xn/p09hbs08.jpg 800w
+                "
+                sizes="(max-width: 399px) 320px, (max-width: 599px) 480px, (max-width: 899px) 800px, 480px"
+                width="240"
+                height="135"
+                loading="lazy"
+              />
+            </div>
+            <div class="promo-card--text">
+              <a href="#" class="promo-link">
+                <h3 class="text-md">The wildest weekend of their lives...</h3>
+              </a>
+              <span class="text-sm clr-neutral-700">WILD WEEKENDS</span>
+            </div>
+          </div>
+        </div>
+        <ul class="footer-cols" role="list">
+          <li class="text-sm">Home</li>
+          <li class="text-sm">News</li>
+          <li class="text-sm">Sport</li>
+          <li class="text-sm">Weather</li>
+          <li class="text-sm">iPlayer</li>
+          <li class="text-sm">Sounds</li>
+          <li class="text-sm">CBBC</li>
+          <li class="text-sm">CBeebies</li>
+          <li class="text-sm">Food</li>
+          <li class="text-sm">Bitesize</li>
+          <li class="text-sm">Arts</li>
+          <li class="text-sm">Taster</li>
+          <li class="text-sm">Local</li>
+          <li class="text-sm">Three</li>
+        </ul>
+        <ul class="footer-links" role="list">
+          <li class="text-sm">Terms of Use</li>
+          <li class="text-sm">About the BBC</li>
+          <li class="text-sm">Privacy Poilicy</li>
+          <li class="text-sm">Cookies</li>
+          <li class="text-sm">Accessibility Help</li>
+          <li class="text-sm">Parental Guidance</li>
+          <li class="text-sm">Contact the BBC</li>
+          <li class="text-sm">Get Personalsed Messages</li>
+          <li class="text-sm">Why you can trust the BBC</li>
+        </ul>
+        <div class="footer-copy text-sm">
+          &copy 2021 BBC. The BBC is not responsible for the content of external
+          sites. <strong>Read about our approach to external linking.</strong>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
