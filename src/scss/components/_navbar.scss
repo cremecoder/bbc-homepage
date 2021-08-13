@@ -33,16 +33,24 @@ header {
 
 .nav-hidden {
   padding: 0.5rem 0;
+  position: relative;
   display: none;
 
   &__inner {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    // display: flex;
+    // justify-content: space-evenly;
+    // flex-wrap: wrap;
+    // font-weight: var(--fw-800);
+    // border-bottom: 1px solid var(--clr-neutral-500);
+    margin: clamp(1rem, 1.25rem, 1.5rem) 0;
+    padding: 3rem;
+    columns: 5.8rem auto;
+    // column-rule: 1px solid var(--clr-neutral-300);
+    gap: 1.5rem;
     font-weight: var(--fw-800);
-    border-bottom: 1px solid var(--clr-neutral-500);
 
     svg {
+      // position: absolute;
       cursor: pointer;
       &:hover {
         fill: var(--clr-neutral-300);

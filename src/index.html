@@ -31,20 +31,20 @@
                 </path>
                 </svg></a></li>
               <ul class="inner-nav">
-                <li class="nav-item text-sm"><a href="#"><span>Home</span></a></li>
-                <li class="nav-item text-sm"><a href="#"><span>News</span></a></li>
-                <li class="nav-item text-sm"><a href="#"><span>Sport</span></a></li>
-                <li class="nav-item text-sm"><a href="#"><span>Weather</span></a></li>
-                <li class="nav-item text-sm"><a href="#"><span>iPlayer</span></a></li>
-                <li class="nav-item text-sm"><a href="#"><span>Sounds</span></a></li>
-                <li class="nav-item text-sm"><a href="#"><span>CBBC</span></a></li>
-                <li class="nav-item text-sm"><a href="#"><span>CBeebies</span></a></li>
+                <li data-index="0" class="nav-item text-sm"><a href="#"><span>Home</span></a></li>
+                <li data-index="1" class="nav-item text-sm"><a href="#"><span>News</span></a></li>
+                <li data-index="2" class="nav-item text-sm"><a href="#"><span>Sport</span></a></li>
+                <li data-index="3" class="nav-item text-sm"><a href="#"><span>Weather</span></a></li>
+                <li data-index="4" class="nav-item text-sm"><a href="#"><span>iPlayer</span></a></li>
+                <li data-index="5" class="nav-item text-sm"><a href="#"><span>Sounds</span></a></li>
+                <li data-index="6" class="nav-item text-sm"><a href="#"><span>CBBC</span></a></li>
+                <li data-index="7" class="nav-item text-sm"><a href="#"><span>CBeebies</span></a></li>
               </ul>
-              <li id="menuMore" data-index="11" class="nav-item text-sm"><a href="#"><span>More</span>
+              <li id="menuMore" class="nav-item text-sm"><a href="#"><span>More</span>
                 <svg viewBox="0 0 32 32" class="icon" focusable="false" aria-hidden="true">
               <path d="M26.7 12.6L16 23.2 5.3 12.6V8.8h21.4v3.8z"></path>
                 </svg></a></li>
-              <li data-index="12" class="nav-item text-sm"><a href="#">
+              <li class="nav-item text-sm"><a href="#">
                 <svg viewBox="0 0 32 32" class="icon" focusable="false" aria-hidden="true">
                 <path d="M13 24.3c6.5 0 11.7-5.1 11.7-11.7S19.6 1 13 1 1.4 6.1 1.4 12.7 6.5 24.3 13 24.3zm0-2.6c-5.1 0-9-3.9-9-9.1s3.9-9.1 9-9.1 9 3.9 9 9.1-3.9 9.1-9 9.1zm5.8.4l8.9 8.9 2.9-2.9-8.9-8.9-2.9 2.9z">
                 </path>
@@ -53,6 +53,14 @@
             </nav>
             <div class="nav-hidden">
               <ul class="nav-hidden__inner container">
+                <li data-index="0" class="text-sm"><a href="#"><span>Home</span></a></li>
+                <li data-index="1" class="text-sm"><a href="#"><span>News</span></a></li>
+                <li data-index="2" class="text-sm"><a href="#"><span>Sport</span></a></li>
+                <li data-index="3" class="text-sm"><a href="#"><span>Weather</span></a></li>
+                <li data-index="4" class="text-sm"><a href="#"><span>iPlayer</span></a></li>
+                <li data-index="5" class="text-sm"><a href="#"><span>Sounds</span></a></li>
+                <li data-index="6" class="text-sm"><a href="#"><span>CBBC</span></a></li>
+                <li data-index="7" class="text-sm"><a href="#"><span>CBeebies</span></a></li>
                 <li><a href="#" class="text-sm clr-neutral-700" ><span>Food</span></a></li> 
                 <li><a href="#" class="text-sm clr-neutral-700" ><span>Bitesize</span></a></li> 
                 <li> <a href="#" class="text-sm clr-neutral-700" ><span>Arts</span></a></li>
@@ -566,41 +574,119 @@
     </footer>
   </body>
   <script>
-      const mainNav = document.querySelector(".nav-links") // navber
-      const hiddenNav = document.querySelector(".nav-hidden") // hidden section
-      const hideNav = document.querySelector("#hideNav") // 'X' button
-      const menuMore = document.querySelector("#menuMore") // 'more' button
 
+      const mainNav = document.querySelector(".nav-links") 
+      const hiddenNav = document.querySelector(".nav-hidden") 
+      const hideNav = document.querySelector("#hideNav") 
+      const menuMore = document.querySelector("#menuMore") 
+      const innerNav = document.querySelector('inner-nav')
+
+      
       menuMore.addEventListener('click', () => {
-          hiddenNav.style.display = 'initial'
-        })
-
-        hideNav.addEventListener('click', () => {
-          hiddenNav.style.display = 'none'
-        })
-
-      document.addEventListener('DOMContentLoaded', () => {
-        let options = {
-          root: mainNav,
-          rootMargin: "-40px 0px 0px 0px",
-          threshold: 0.15
-        }
-
-        let observer = new IntersectionObserver(touching, options)
-        document.querySelectorAll('.inner-nav li').forEach(navItem => {
-          observer.observe(navItem)
-        })
+        hiddenNav.style.display = 'initial'
       })
 
-      function touching(elements) {
-        elements.forEach(el => {
-          if (el.isIntersecting) {
-            el.target.remove()
-            console.log(el)
-            hiddenNav.childNodes[1].insertAdjacentHTML('afterbegin', `<li><a href="#" class="text-sm clr-neutral-700" ><span>${el.target.innerText}</span></a></li>`)
-          } 
+      hideNav.addEventListener('click', () => {
+        hiddenNav.style.display = 'none'
+      })
+        
+      let options = {
+        root: mainNav,
+        rootMargin: "-20px 0px 0px 0px",
+        threshold: 0.98
+      }
+
+      let observer = new IntersectionObserver(callback, options)
+
+      const mainNavItems = mainNav.querySelectorAll('.inner-nav .nav-item')
+
+      mainNavItems.forEach(mainNavItem => {
+        observer.observe(mainNavItem)
+      })
+
+      const hiddenNavItems = hiddenNav.querySelectorAll('li')
+  
+      function callback(mainNavItems) {
+        mainNavItems.forEach(mainNavItem => {
+          let index = parseInt(mainNavItem.target.dataset.index);
+          if (mainNavItem.isIntersecting) {
+            mainNavItem.target.style.visibility = 'hidden'; // hide main
+            hiddenNavItems[index].style.display = 'block'; // show hidden
+          } else {
+            mainNavItem.target.style.visibility = 'visible'; // show main
+            hiddenNavItems[index].style.display = 'none'; // hide hidden
+          }
         })
       }
+      
+    /* ================================================================================= */
+
+      // const mainNav = document.querySelector(".nav-links") 
+      // const hiddenNav = document.querySelector(".nav-hidden") 
+      // const hideNav = document.querySelector("#hideNav") 
+      // const menuMore = document.querySelector("#menuMore") 
+      // const innerNav = document.querySelector('inner-nav')
+    
+      // menuMore.addEventListener('click', () => {
+      //     hiddenNav.style.display = 'initial'
+      // })
+
+      // hideNav.addEventListener('click', () => {
+      //   hiddenNav.style.display = 'none'
+      // })
+
+      //   let options = {
+      //     root: innerNav,
+      //     threshold: 0.98
+      //   }
+
+      // const hiddenNavItems = hiddenNav.querySelectorAll('.nav-item')
+      
+      // function callback(mainNavItems, observer) {
+      //   mainNavItems.forEach(mainNavItem => {
+      //     let index = parseInt(mainNavItem.target.dataset.index);
+      //     if (mainNavItem.intersectionRatio > 0.98) {
+      //       mainNavItem.target.style.visibility = 'visible'; 
+      //       hiddenNavItems[index].style.display = 'none';
+      //     } else {
+            // mainNavItem.target.style.visibility = 'hidden';
+            // hiddenNavItems[index].style.display = 'block';
+      //     }
+      //   })
+      // }
+
+      // const mainNavItems = mainNav.querySelectorAll('.inner-nav .nav-item')
+     
+      // let observer = new IntersectionObserver(callback, options);
+      
+      // mainNavItems.forEach(item => {
+      //   observer.observe(item)
+      // }) 
+
+      /* ================================================================================= */
+
+      // document.addEventListener('DOMContentLoaded', () => {
+      //   let options = {
+      //     root: mainNav,
+      //     rootMargin: "-40px 0px 0px 0px",
+      //     threshold: 0.15
+      //   }
+
+      //   let observer = new IntersectionObserver(touching, options)
+      //   document.querySelectorAll('.inner-nav li').forEach(navItem => {
+      //     observer.observe(navItem)
+      //   })
+      // })
+
+      // function touching(elements) {
+      //   elements.forEach(el => {
+      //     if (el.isIntersecting) {
+      //       el.target.remove()
+      //       console.log(el)
+      //       hiddenNav.childNodes[1].insertAdjacentHTML('afterbegin', `<li><a href="#" class="text-sm clr-neutral-700" ><span>${el.target.innerText}</span></a></li>`)
+      //     } 
+      //   })
+      // }
 
   </script>
 </html>
