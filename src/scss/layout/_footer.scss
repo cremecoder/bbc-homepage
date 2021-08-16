@@ -4,14 +4,6 @@ footer {
   background-color: var(--clr-neutral-900);
   padding: 1rem 0.5rem;
 
-  // #{&}-item {
-  //   color: var(--clr-neutral-100);
-  //   font-weight: var(--fw-800);
-  //   &:hover {
-  //     text-decoration: underline;
-  //   }
-  // }
-
   h2 {
     padding: clamp(0.5rem, 0.75rem, 1rem) 0;
   }

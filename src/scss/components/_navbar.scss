@@ -1,19 +1,29 @@
 header {
-  // position: relative;
   margin: 0 auto;
   overflow-x: hidden;
   font-weight: var(--fw-800);
 }
 
 .nav {
-  display: flex;
-  // position: relative;
-  align-items: center;
-  justify-content: center;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
   border-bottom: 1px solid var(--clr-neutral-500);
 
   #{&}-links {
     display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & > :first-child {
+      border-left: none;
+    }
+
+    & > :last-child {
+      border-right: none;
+    }
   }
 
   &-item {
@@ -23,8 +33,6 @@ header {
     flex-grow: 1;
 
     a {
-      // display: block;
-      // position: relative;
       text-decoration: none;
       white-space: nowrap;
       color: inherit;
@@ -34,24 +42,17 @@ header {
 
 .nav-hidden {
   padding: 0.5rem 0;
-  // position: relative;
   display: none;
 
   &__inner {
-    // display: flex;
-    // justify-content: space-evenly;
-    // flex-wrap: wrap;
-    // font-weight: var(--fw-800);
-    // border-bottom: 1px solid var(--clr-neutral-500);
     margin: clamp(1rem, 1.25rem, 1.5rem) 0;
     padding: 3rem;
     columns: 5.8rem auto;
-    // column-rule: 1px solid var(--clr-neutral-300);
     gap: 1.5rem;
     font-weight: var(--fw-800);
+    border-bottom: 1px solid var(--clr-neutral-500);
 
     svg {
-      // position: absolute;
       cursor: pointer;
       &:hover {
         fill: var(--clr-neutral-300);
@@ -74,4 +75,16 @@ header {
   height: 0;
   z-index: -10;
   overflow: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+  #icon--search {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #icon--signIn {
+    display: none;
+  }
 }
