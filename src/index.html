@@ -575,6 +575,23 @@
   </body>
   <script>
 
+      // const mainNav = document.querySelector(".nav-links") 
+      // const hiddenNav = document.querySelector(".nav-hidden") 
+      // const hideNav = document.querySelector("#hideNav") 
+      // const menuMore = document.querySelector("#menuMore") 
+      // const innerNav = document.querySelector('inner-nav')
+
+      
+      // menuMore.addEventListener('click', () => {
+      //   hiddenNav.style.display = 'initial'
+      // })
+
+      // hideNav.addEventListener('click', () => {
+      //   hiddenNav.style.display = 'none'
+      // })
+
+    /* ================================================================================= */
+
       const mainNav = document.querySelector(".nav-links") 
       const hiddenNav = document.querySelector(".nav-hidden") 
       const hideNav = document.querySelector("#hideNav") 
@@ -605,65 +622,34 @@
       })
 
       const hiddenNavItems = hiddenNav.querySelectorAll('li')
-  
-      function callback(mainNavItems) {
+
+      function callback(mainNavItems, observer) {
         mainNavItems.forEach(mainNavItem => {
           let index = parseInt(mainNavItem.target.dataset.index);
           if (mainNavItem.isIntersecting) {
-            mainNavItem.target.style.visibility = 'hidden'; // hide main
+            mainNavItem.target.classList.add('hide-item') // hide main 
             hiddenNavItems[index].style.display = 'block'; // show hidden
           } else {
-            mainNavItem.target.style.visibility = 'visible'; // show main
+            mainNavItem.target.classList.remove('hide-item') // show main
             hiddenNavItems[index].style.display = 'none'; // hide hidden
           }
         })
       }
-      
-    /* ================================================================================= */
-
-      // const mainNav = document.querySelector(".nav-links") 
-      // const hiddenNav = document.querySelector(".nav-hidden") 
-      // const hideNav = document.querySelector("#hideNav") 
-      // const menuMore = document.querySelector("#menuMore") 
-      // const innerNav = document.querySelector('inner-nav')
-    
-      // menuMore.addEventListener('click', () => {
-      //     hiddenNav.style.display = 'initial'
-      // })
-
-      // hideNav.addEventListener('click', () => {
-      //   hiddenNav.style.display = 'none'
-      // })
-
-      //   let options = {
-      //     root: innerNav,
-      //     threshold: 0.98
-      //   }
-
-      // const hiddenNavItems = hiddenNav.querySelectorAll('.nav-item')
-      
-      // function callback(mainNavItems, observer) {
+  
+      // function callback(mainNavItems) {
       //   mainNavItems.forEach(mainNavItem => {
       //     let index = parseInt(mainNavItem.target.dataset.index);
-      //     if (mainNavItem.intersectionRatio > 0.98) {
-      //       mainNavItem.target.style.visibility = 'visible'; 
-      //       hiddenNavItems[index].style.display = 'none';
+      //     if (mainNavItem.isIntersecting) {
+      //       mainNavItem.target.style.visibility = 'hidden'; // hide main
+      //       hiddenNavItems[index].style.display = 'block'; // show hidden
       //     } else {
-            // mainNavItem.target.style.visibility = 'hidden';
-            // hiddenNavItems[index].style.display = 'block';
+      //       mainNavItem.target.style.visibility = 'visible'; // show main
+      //       hiddenNavItems[index].style.display = 'none'; // hide hidden
       //     }
       //   })
       // }
-
-      // const mainNavItems = mainNav.querySelectorAll('.inner-nav .nav-item')
-     
-      // let observer = new IntersectionObserver(callback, options);
       
-      // mainNavItems.forEach(item => {
-      //   observer.observe(item)
-      // }) 
-
-      /* ================================================================================= */
+    /* ================================================================================= */
 
       // document.addEventListener('DOMContentLoaded', () => {
       //   let options = {

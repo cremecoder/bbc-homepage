@@ -1,5 +1,5 @@
 header {
-  position: relative;
+  // position: relative;
   margin: 0 auto;
   overflow-x: hidden;
   font-weight: var(--fw-800);
@@ -7,7 +7,7 @@ header {
 
 .nav {
   display: flex;
-  position: relative;
+  // position: relative;
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid var(--clr-neutral-500);
@@ -20,10 +20,11 @@ header {
     padding: 12px 0.5em 0 8px;
     border-left: 1px solid var(--clr-neutral-500);
     border-right: 1px solid var(--clr-neutral-500);
+    flex-grow: 1;
 
     a {
-      display: block;
-      position: relative;
+      // display: block;
+      // position: relative;
       text-decoration: none;
       white-space: nowrap;
       color: inherit;
@@ -33,7 +34,7 @@ header {
 
 .nav-hidden {
   padding: 0.5rem 0;
-  position: relative;
+  // position: relative;
   display: none;
 
   &__inner {
@@ -63,4 +64,14 @@ header {
 .inner-nav {
   display: flex;
   flex-wrap: wrap;
+}
+
+.hide-item {
+  padding: 0;
+  margin: 0;
+  border: none;
+  visibility: hidden;
+  height: 0;
+  z-index: -10;
+  overflow: hidden;
 }
