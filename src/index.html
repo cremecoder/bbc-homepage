@@ -575,6 +575,7 @@
   </body>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      
       const hiddenNav = document.querySelector(".nav-hidden") 
       const hideNav = document.querySelector("#hideNav") 
       const menuMore = document.querySelector("#menuMore") 
@@ -612,66 +613,28 @@
         })
       }
 
-      // const innerNav = document.querySelector(".inner-nav")
+      const innerNav = document.querySelector(".inner-nav")
       let resizer = new ResizeObserver(handleResize)
       resizer.observe(mainNav)
       function handleResize(entries) {
-        console.log(entries.target)
+        let mainNavContainer = entries[0].target
+        if (entries[0].contentRect.width <= 350) {
+          mainNavContainer.childNodes[3].style.display = 'none'
+          mainNavContainer.childNodes[5].style.display = 'none'
+        } else {
+          mainNavContainer.childNodes[3].style.display = 'block'
+          mainNavContainer.childNodes[5].style.display = 'block'
+        }
+        if (entries[0].contentRect.width <= 420) {
+          innerNav.style.display = 'none'
+          menuMore.querySelector('a span').textContent = 'Menu'
+        } else {
+          innerNav.style.display = 'flex'
+          menuMore.querySelector('a span').textContent = 'More'
+        }
       }
     
     })
 
-    /* /////////////////////////////////////////////////////////////////////////// */
-
-    // document.addEventListener('DOMContentLoaded', () => {
-    //   const hiddenNav = document.querySelector(".nav-hidden") 
-    //   const hideNav = document.querySelector("#hideNav") 
-    //   const menuMore = document.querySelector("#menuMore") 
-    //   menuMore.addEventListener('click', () => {
-    //     hiddenNav.style.display = 'initial'
-    //   })
-
-    //   hideNav.addEventListener('click', () => {
-    //     hiddenNav.style.display = 'none'
-    //   })
-        
-    //   const mainNav = document.querySelector(".nav-links") 
-    //   let options = {
-    //     root: mainNav,
-    //     rootMargin: "-20px 0px 0px 0px",
-    //     threshold: 0.98
-    //   }
-
-    //   let observer = new IntersectionObserver(callback, options)
-    //   const mainNavItems = mainNav.querySelectorAll('.inner-nav li[data-index]')
-    //   mainNavItems.forEach(mainNavItem => {
-    //     observer.observe(mainNavItem)
-    //   })
-
-      // const innerNav = document.querySelector(".inner-nav")
-      // window.addEventListener('resize', () => {
-      //   if (window.screen.width <= 420) {
-      //     // console.log('under 420')
-      //     innerNav.style.display = 'none'
-      //   } else {
-      //     innerNav.style.display = 'flex'
-      //   }
-      // })
-
-    //   const hiddenNavItems = hiddenNav.querySelectorAll('li')
-    //   function callback(mainNavItems, observer) {
-    //     mainNavItems.forEach(mainNavItem => {
-    //       let index = parseInt(mainNavItem.target.dataset.index);
-    //       if (mainNavItem.isIntersecting) {
-    //         // console.log('intersecting')
-    //         mainNavItem.target.classList.add('hide-item') // hide main 
-    //         hiddenNavItems[index].style.display = 'block'; // show hidden
-    //       } else {
-    //         mainNavItem.target.classList.remove('hide-item') // show main
-    //         hiddenNavItems[index].style.display = 'none'; // hide hidden
-    //       }
-    //     })
-    //   }
-    // })
   </script>
 </html>
