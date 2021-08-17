@@ -11,11 +11,8 @@ header {
   max-width: 1200px;
   margin: 0 auto;
   border-bottom: 1px solid var(--clr-neutral-500);
-
   #{&}-links {
     display: flex;
-    align-items: center;
-    justify-content: center;
 
     & > :first-child {
       border-left: none;
@@ -37,17 +34,20 @@ header {
       white-space: nowrap;
       color: inherit;
     }
+
+    span {
+      padding: 0 1em;
+    }
   }
 }
 
 .nav-hidden {
-  padding: 0.5rem 0;
+  padding: 1rem 0.5rem;
   display: none;
 
   &__inner {
-    margin: clamp(1rem, 1.25rem, 1.5rem) 0;
-    padding: 3rem;
     columns: 5.8rem auto;
+    column-rule: 1px solid var(--clr-neutral-300);
     gap: 1.5rem;
     font-weight: var(--fw-800);
     border-bottom: 1px solid var(--clr-neutral-500);
