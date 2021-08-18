@@ -51,7 +51,8 @@
                 </svg><span id="icon--search">Search</span></a></li>
               </ul>
             </nav>
-            <div class="nav-hidden">
+            <div class="nav-hidden container hidden">
+              <svg viewBox="0 0 32 32" focusable="false" id="hideNav" class="icon--close" aria-hidden="true"><path d="M30 4.6l-2.8-2.8L2 27.4l2.8 2.8L30 4.6zM4.8 1.8L1.9 4.7l25.2 25.5 2.9-2.9L4.8 1.8z"></path></svg>
               <ul class="nav-hidden__inner">
                 <li data-index="0" class="text-sm"><a href="#"><span>Sign In</span></a></li>
                 <li data-index="1" class="text-sm"><a href="#"><span>Notifications</span></a></li>
@@ -69,7 +70,6 @@
                 <li><a href="#" class="text-sm clr-neutral-700" ><span>Taster</span></a></li> 
                 <li><a href="#" class="text-sm clr-neutral-700" ><span>Local</span></a></li> 
                 <li><a href="#" class="text-sm clr-neutral-700" ><span>Three</span></a></li> 
-                <svg viewBox="0 0 32 32" focusable="false" id="hideNav" class="icon" aria-hidden="true"><path d="M30 4.6l-2.8-2.8L2 27.4l2.8 2.8L30 4.6zM4.8 1.8L1.9 4.7l25.2 25.5 2.9-2.9L4.8 1.8z"></path></svg>
               </ul>
             </div>
             <div>
@@ -577,16 +577,23 @@
   </body>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      
       const hiddenNav = document.querySelector(".nav-hidden") 
       const hideNav = document.querySelector("#hideNav") 
       const menuMore = document.querySelector("#menuMore") 
+
       menuMore.addEventListener('click', () => {
-        hiddenNav.style.display = 'initial'
+        if (hiddenNav.classList.contains('hidden')) { 
+          hiddenNav.classList.remove('hidden') 
+          hiddenNav.classList.add('block') 
+        } else {
+          hiddenNav.classList.remove('block')
+          hiddenNav.classList.add('hidden')
+        }
       })
 
       hideNav.addEventListener('click', () => {
-        hiddenNav.style.display = 'none'
+        hiddenNav.classList.remove('block')
+        hiddenNav.classList.add('hidden')
       })
         
       const mainNav = document.querySelector(".nav-links") 
@@ -621,10 +628,8 @@
       function handleResize(entries) {
         let mainNavContainer = entries[0].target
         if (entries[0].contentRect.width <= 350) {
-          // innerNav.childNodes[1].classList.add('hide-item')
           innerNav.childNodes[3].classList.add('hide-item')
         } else {
-          // innerNav.childNodes[1].classList.remove('hide-item')
           innerNav.childNodes[3].classList.remove('hide-item')
         }
         if (entries[0].contentRect.width <= 420) {
@@ -633,33 +638,6 @@
           menuMore.querySelector('a span').textContent = 'More'
         }
       }
-
-      // const innerNav = document.querySelector(".inner-nav")
-      // let resizer = new ResizeObserver(handleResize)
-      // resizer.observe(mainNav)
-      // function handleResize(entries) {
-      //   let mainNavContainer = entries[0].target
-      //   if (entries[0].contentRect.width <= 350) {
-      //     mainNavContainer.childNodes[3].style.display = 'none'
-      //     mainNavContainer.childNodes[5].style.display = 'none'
-      //     // mainNavContainer.childNodes[3].classList.add('hide-item')
-      //     // mainNavContainer.childNodes[5].classList.add('hide-item')
-      //   } else {
-      //     mainNavContainer.childNodes[3].style.display = 'block'
-      //     mainNavContainer.childNodes[5].style.display = 'block'
-      //     // mainNavContainer.childNodes[3].classList.remove('hide-item')
-      //     // mainNavContainer.childNodes[5].classList.remove('hide-item')
-      //   }
-      //   if (entries[0].contentRect.width <= 420) {
-      //     innerNav.style.display = 'none'
-      //     // innerNav.classList.add('hide-item')
-      //     menuMore.querySelector('a span').textContent = 'Menu'
-      //   } else {
-      //     innerNav.style.display = 'flex'
-      //     // innerNav.classList.remove('hide-item')
-      //     menuMore.querySelector('a span').textContent = 'More'
-      //   }
-      // }
     
     })
 

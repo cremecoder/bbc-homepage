@@ -65,11 +65,18 @@ svg {
 .icon {
   width: 1.2rem;
   height: 1.2rem;
+  cursor: pointer;
 
-  // &--close {
-  //   @extend .icon;
-  //   align-self: center;
-  // }
+  &--close {
+    @extend .icon;
+    align-self: center;
+    float: right;
+
+    &:hover {
+      fill: var(--clr-neutral-300);
+      background-color: var(--clr-active);
+    }
+  }
 }
 
 /* Utility classes for text sizes */
@@ -91,4 +98,16 @@ svg {
   .clr-#{$color} {
     color: var(--clr-#{$color});
   }
+}
+
+.block {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.flex {
+  display: flex;
 }

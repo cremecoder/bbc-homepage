@@ -5,9 +5,6 @@ header {
 }
 
 .nav {
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
   border-bottom: 1px solid var(--clr-neutral-500);
@@ -16,10 +13,16 @@ header {
 
     & > :first-child {
       border-left: none;
+      flex-basis: 1%;
+    }
+
+    & > :nth-child(3) {
+      flex: 0 0 1%;
     }
 
     & > :last-child {
       border-right: none;
+      flex-basis: 1%;
     }
   }
 
@@ -36,29 +39,20 @@ header {
     }
 
     span {
-      padding: 0 1em;
+      padding: 0 0.5em;
     }
   }
 }
 
 .nav-hidden {
   padding: 1rem 0.5rem;
-  display: none;
 
   &__inner {
+    border-bottom: 1px solid var(--clr-neutral-500);
+    padding: 1rem;
     columns: 5.8rem auto;
-    column-rule: 1px solid var(--clr-neutral-300);
     gap: 1.5rem;
     font-weight: var(--fw-800);
-    border-bottom: 1px solid var(--clr-neutral-500);
-
-    svg {
-      cursor: pointer;
-      &:hover {
-        fill: var(--clr-neutral-300);
-        background-color: var(--clr-active);
-      }
-    }
   }
 }
 
@@ -75,6 +69,16 @@ header {
   height: 0;
   z-index: -10;
   overflow: hidden;
+}
+
+@media only screen and (max-width: 320px) {
+  .nav {
+    #{&}-links {
+      span {
+        padding: 0;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 600px) {
