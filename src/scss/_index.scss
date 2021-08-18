@@ -1,10 +1,10 @@
 @forward './abstracts/colors';
 @forward './abstracts/typography';
 @forward './base/root';
+@forward './components/navbar';
 @forward "./layout/main-content";
 @forward './layout/banner';
 @forward "./layout/footer";
-@forward './components/navbar';
 @forward './components/container';
 @forward './components/grid';
 @forward './components/promo-card';

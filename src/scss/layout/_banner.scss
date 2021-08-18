@@ -1,3 +1,4 @@
+/* Banner section */
 .banner {
   height: 60vh;
   background: linear-gradient(rgba(0, 0, 0, 0) 10%, var(--clr-banner) 60%),
@@ -29,6 +30,7 @@
   }
 }
 
+/* Breakpoints for banner BG image and text */
 @media only screen and (min-width: 400px) {
   .banner {
     background: linear-gradient(rgba(0, 0, 0, 0) 35%, var(--clr-banner) 50%),
