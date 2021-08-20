@@ -1,3 +1,4 @@
+@use '../abstracts/colors' as clr;
 /* Navigation styles */
 
 header {
@@ -7,7 +8,7 @@ header {
 }
 
 .nav {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
   border-bottom: 1px solid var(--clr-neutral-500);
   #{&}-links {
@@ -16,6 +17,9 @@ header {
     & > :first-child {
       border-left: none;
       flex-basis: 1%;
+      & > * {
+        float: right;
+      }
     }
 
     & > :nth-child(3) {
@@ -32,16 +36,15 @@ header {
     padding: 12px 0.5em 0 8px;
     border-left: 1px solid var(--clr-neutral-500);
     border-right: 1px solid var(--clr-neutral-500);
+    border-bottom: 5px solid transparent;
+    cursor: pointer;
     flex-grow: 1;
+    white-space: nowrap;
 
     a {
-      text-decoration: none;
-      white-space: nowrap;
+      padding: 0.25em 0.75em;
       color: inherit;
-    }
-
-    span {
-      padding: 0 0.5em;
+      display: flex;
     }
   }
 
@@ -67,6 +70,15 @@ header {
         color: var(--clr-neutral-300);
         background-color: var(--clr-neutral-700);
       }
+    }
+  }
+}
+
+@each $color, $value in clr.$colors {
+  [data-#{$color}] {
+    &:hover,
+    &:active {
+      border-bottom: 5px solid var(--clr-#{$color});
     }
   }
 }

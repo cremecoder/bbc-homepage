@@ -1,6 +1,5 @@
 node_modules
 .cache
 dist
-myNotes.txt
 .DS_Store
 templates/
