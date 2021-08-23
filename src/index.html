@@ -40,7 +40,7 @@
                   <li data-index="8" data-cbbc class="nav-item text-sm"><a href="#"><span>CBBC</span></a></li>
                   <li data-index="9" data-cbeebies class="nav-item text-sm"><a href="#"><span>CBeebies</span></a></li>
               </ul>
-              <li data-neutral-700 class="nav-item text-sm"><a href="#"><span>More</span>
+              <li data-intersection data-neutral-700 class="nav-item text-sm"><a href="#"><span>More</span>
                 <svg viewBox="0 0 32 32" class="icon" focusable="false" aria-hidden="true">
               <path d="M26.7 12.6L16 23.2 5.3 12.6V8.8h21.4v3.8z"></path>
                 </svg></a></li>
@@ -51,8 +51,7 @@
                 </svg><span data-search>Search</span></a></li>
               </ul>
             </nav>
-            <div class="nav-hidden container hidden">
-              <svg viewBox="0 0 32 32" focusable="false" class="icon--close" aria-hidden="true"><path d="M30 4.6l-2.8-2.8L2 27.4l2.8 2.8L30 4.6zM4.8 1.8L1.9 4.7l25.2 25.5 2.9-2.9L4.8 1.8z"></path></svg>
+            <div class="nav-hidden hidden">
               <ul class="nav-hidden__inner">
                 <li data-index="0"><a href="#" class="nav-hidden--item text-sm"><span>Sign In</span></a></li>
                 <li data-index="1"><a href="#" class="nav-hidden--item text-sm"><span>Notifications</span></a></li>
@@ -70,6 +69,7 @@
                 <li><a href="#" class="nav-hidden--item text-sm" ><span>Taster</span></a></li> 
                 <li><a href="#" class="nav-hidden--item text-sm" ><span>Local</span></a></li> 
                 <li><a href="#" class="nav-hidden--item text-sm" ><span>Three</span></a></li> 
+                <svg viewBox="0 0 32 32" focusable="false" class="icon--close" aria-hidden="true"><path d="M30 4.6l-2.8-2.8L2 27.4l2.8 2.8L30 4.6zM4.8 1.8L1.9 4.7l25.2 25.5 2.9-2.9L4.8 1.8z"></path></svg>
               </ul>
             </div>
             <div>
@@ -552,6 +552,7 @@
     </footer>
   </body>
   <script>
+
 /* Script - Handles hide/show functionality of the navbar */
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -579,6 +580,7 @@ document.addEventListener('DOMContentLoaded', () => {
   })
   
   /* Intersection Observer - Handles moving inner nav items to the hidden menu */
+  
   let options = {
     root: mainNav,
     rootMargin: "-20px 0px 0px 0px",
@@ -608,22 +610,22 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* Resize Observer - Handles hiding nav text spans and notification bell icon  */
-  let resizer = new ResizeObserver(handleResize)
-  resizer.observe(mainNav)
+  // let resizer = new ResizeObserver(handleResize)
+  // resizer.observe(mainNav)
 
-  function handleResize(entries) {
-    let mainNavContainer = entries[0].target
-    if (entries[0].contentRect.width <= 350) {
-      innerNav.childNodes[3].classList.add('hide-item')
-    } else {
-      innerNav.childNodes[3].classList.remove('hide-item')
-    }
-    if (entries[0].contentRect.width <= 420) {
-      menuMore.querySelector('a span').textContent = 'Menu'
-    } else {
-      menuMore.querySelector('a span').textContent = 'More'
-    }
-  }
+  // function handleResize(entries) {
+  //   let mainNavContainer = entries[0].target
+  //   if (entries[0].contentRect.width <= 350) {
+  //     innerNav.childNodes[3].classList.add('hide-item')
+  //   } else {
+  //     innerNav.childNodes[3].classList.remove('hide-item')
+  //   }
+  //   if (entries[0].contentRect.width <= 420) {
+  //     menuMore.querySelector('a span').textContent = 'Menu'
+  //   } else {
+  //     menuMore.querySelector('a span').textContent = 'More'
+  //   }
+  // }
 
 })
         

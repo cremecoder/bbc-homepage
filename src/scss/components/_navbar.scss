@@ -8,11 +8,11 @@ header {
 }
 
 .nav {
-  max-width: 1300px;
-  margin: 0 auto;
   border-bottom: 1px solid var(--clr-neutral-500);
   #{&}-links {
     display: flex;
+    max-width: 1300px;
+    margin: 0 auto;
 
     & > :first-child {
       border-left: none;
@@ -55,9 +55,11 @@ header {
 
   &-hidden {
     padding: 1rem 0.5rem;
+    border-bottom: 1px solid var(--clr-neutral-500);
 
     &__inner {
-      border-bottom: 1px solid var(--clr-neutral-500);
+      max-width: 1300px;
+      margin: 0 auto;
       padding: 1rem;
       columns: 5.8rem auto;
       gap: 1.5rem;
