@@ -580,6 +580,17 @@ document.addEventListener('DOMContentLoaded', () => {
   })
   
   /* Intersection Observer - Handles moving inner nav items to the hidden menu */
+  // const hiddenNavItems = hiddenNav.querySelectorAll('li')
+  // innerNav.querySelectorAll('li[data-index]').forEach(innerNavItem => {
+  //   let index = parseInt(innerNavItem.dataset.index);
+  //   if (innerNavItem.style.width < innerNavItem.style.flexBasis) {
+  //     innerNavItem.classList.add('hide-item') // hide main 
+  //     hiddenNavItems[index].style.display = 'block'; // show hidden
+  //   } else {
+  //     innerNavItem.classList.remove('hide-item') // show main
+  //       hiddenNavItems[index].style.display = 'none'; // hide hidden
+  //   }
+  // })
   
   let options = {
     root: mainNav,
@@ -610,22 +621,23 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* Resize Observer - Handles hiding nav text spans and notification bell icon  */
-  // let resizer = new ResizeObserver(handleResize)
-  // resizer.observe(mainNav)
 
-  // function handleResize(entries) {
-  //   let mainNavContainer = entries[0].target
-  //   if (entries[0].contentRect.width <= 350) {
-  //     innerNav.childNodes[3].classList.add('hide-item')
-  //   } else {
-  //     innerNav.childNodes[3].classList.remove('hide-item')
-  //   }
-  //   if (entries[0].contentRect.width <= 420) {
-  //     menuMore.querySelector('a span').textContent = 'Menu'
-  //   } else {
-  //     menuMore.querySelector('a span').textContent = 'More'
-  //   }
-  // }
+  let resizer = new ResizeObserver(handleResize)
+  resizer.observe(mainNav)
+
+  function handleResize(entries) {
+    let mainNavContainer = entries[0].target
+    if (entries[0].contentRect.width <= 350) {
+      innerNav.childNodes[3].classList.add('hide-item')
+    } else {
+      innerNav.childNodes[3].classList.remove('hide-item')
+    }
+    if (entries[0].contentRect.width <= 420) {
+      menuMore.querySelector('a span').textContent = 'Menu'
+    } else {
+      menuMore.querySelector('a span').textContent = 'More'
+    }
+  }
 
 })
         
