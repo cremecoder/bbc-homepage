@@ -27,7 +27,6 @@ footer {
 
   .#{&}--link {
     color: var(--clr-neutral-300);
-    padding: 1rem;
     &:hover {
       text-decoration: underline;
     }
