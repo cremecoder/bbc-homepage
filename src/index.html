@@ -592,52 +592,52 @@ document.addEventListener('DOMContentLoaded', () => {
   //   }
   // })
   
-  let options = {
-    root: mainNav,
-    rootMargin: "-20px 0px 0px 0px",
-    threshold: 0.98
-  }
+  // let options = {
+  //   root: mainNav,
+  //   rootMargin: "-20px 0px 0px 0px",
+  //   threshold: 0.98
+  // }
 
-  let observer = new IntersectionObserver(handleWrapping, options)
+  // let observer = new IntersectionObserver(handleWrapping, options)
 
-  const mainNavItems = innerNav.querySelectorAll('li[data-index]')
-  mainNavItems.forEach(mainNavItem => {
-    observer.observe(mainNavItem)
-  })
+  // const mainNavItems = innerNav.querySelectorAll('li[data-index]')
+  // mainNavItems.forEach(mainNavItem => {
+  //   observer.observe(mainNavItem)
+  // })
 
-  const hiddenNavItems = hiddenNav.querySelectorAll('li')
+  // const hiddenNavItems = hiddenNav.querySelectorAll('li')
 
-  function handleWrapping(mainNavItems, observer) {
-    mainNavItems.forEach(mainNavItem => {
-      let index = parseInt(mainNavItem.target.dataset.index);
-      if (mainNavItem.isIntersecting) {
-        mainNavItem.target.classList.add('hide-item') // hide main 
-        hiddenNavItems[index].style.display = 'block'; // show hidden
-      } else {
-        mainNavItem.target.classList.remove('hide-item') // show main
-        hiddenNavItems[index].style.display = 'none'; // hide hidden
-      }
-    })
-  }
+  // function handleWrapping(mainNavItems, observer) {
+  //   mainNavItems.forEach(mainNavItem => {
+  //     let index = parseInt(mainNavItem.target.dataset.index);
+  //     if (mainNavItem.isIntersecting) {
+  //       mainNavItem.target.classList.add('hide-item') // hide main 
+  //       hiddenNavItems[index].style.display = 'block'; // show hidden
+  //     } else {
+  //       mainNavItem.target.classList.remove('hide-item') // show main
+  //       hiddenNavItems[index].style.display = 'none'; // hide hidden
+  //     }
+  //   })
+  // }
 
   /* Resize Observer - Handles hiding nav text spans and notification bell icon  */
 
-  let resizer = new ResizeObserver(handleResize)
-  resizer.observe(mainNav)
+//   let resizer = new ResizeObserver(handleResize)
+//   resizer.observe(mainNav)
 
-  function handleResize(entries) {
-    let mainNavContainer = entries[0].target
-    if (entries[0].contentRect.width <= 350) {
-      innerNav.childNodes[3].classList.add('hide-item')
-    } else {
-      innerNav.childNodes[3].classList.remove('hide-item')
-    }
-    if (entries[0].contentRect.width <= 420) {
-      menuMore.querySelector('a span').textContent = 'Menu'
-    } else {
-      menuMore.querySelector('a span').textContent = 'More'
-    }
-  }
+//   function handleResize(entries) {
+//     let mainNavContainer = entries[0].target
+//     if (entries[0].contentRect.width <= 350) {
+//       innerNav.childNodes[3].classList.add('hide-item')
+//     } else {
+//       innerNav.childNodes[3].classList.remove('hide-item')
+//     }
+//     if (entries[0].contentRect.width <= 420) {
+//       menuMore.querySelector('a span').textContent = 'Menu'
+//     } else {
+//       menuMore.querySelector('a span').textContent = 'More'
+//     }
+//   }
 
 })
         

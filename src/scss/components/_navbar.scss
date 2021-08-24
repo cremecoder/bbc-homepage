@@ -50,7 +50,7 @@ header {
 
   &--inner {
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
   }
 
   &-hidden {
@@ -76,6 +76,128 @@ header {
   }
 }
 
+.nav--inner {
+  [data-index] {
+    display: none;
+  }
+}
+
+.nav-hidden__inner {
+  [data-index] {
+    display: block;
+  }
+}
+
+@media (min-width: 42.9375em) {
+  .nav--inner [data-index="0"] {
+    display: flex;
+  }
+
+  .nav-hidden__inner {
+    [data-index="0"] {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 52.5em) {
+  .nav--inner [data-index="1"] {
+    display: flex;
+  }
+
+  .nav-hidden__inner {
+    [data-index="1"] {
+      display: none;
+    }
+  }
+}
+@media (min-width: 56.5625em) {
+  .nav--inner [data-index="2"] {
+    display: flex;
+  }
+  .nav-hidden__inner {
+    [data-index="2"] {
+      display: none;
+    }
+  }
+}
+@media (min-width: 65.625em) {
+  .nav--inner [data-index="3"] {
+    display: flex;
+  }
+  .nav-hidden__inner {
+    [data-index="3"] {
+      display: none;
+    }
+  }
+}
+@media (min-width: 71.875em) {
+  .nav--inner [data-index="4"] {
+    display: flex;
+  }
+  .nav-hidden__inner {
+    [data-index="4"] {
+      display: none;
+    }
+  }
+}
+@media (min-width: 89.0625em) {
+  .nav--inner [data-index="5"] {
+    display: flex;
+  }
+  .nav-hidden__inner {
+    [data-index="5"] {
+      display: none;
+    }
+  }
+}
+@media (min-width: 100em) {
+  .nav--inner [data-index="6"] {
+    display: flex;
+  }
+  .nav-hidden__inner {
+    [data-index="6"] {
+      display: none;
+    }
+  }
+}
+@media (min-width: 112.1875em) {
+  .nav--inner [data-index="7"] {
+    display: flex;
+  }
+  .nav-hidden__inner {
+    [data-index="7"] {
+      display: none;
+    }
+  }
+}
+@media (min-width: 128.125em) {
+  .nav--inner [data-index="8"] {
+    display: flex;
+  }
+  .nav-hidden__inner {
+    [data-index="8"] {
+      display: none;
+    }
+  }
+}
+@media (min-width: 171.25em) {
+  .nav--inner [data-index="9"] {
+    display: flex;
+  }
+  .nav-hidden__inner {
+    [data-index="9"] {
+      display: none;
+    }
+  }
+  // .main-nav__primary {
+  //   justify-content: flex-start;
+  // }
+  // .nav-item {
+  //   padding: 0 0.65em;
+  // }
+}
+
 @each $color, $value in clr.$colors {
   [data-#{$color}] {
     &:hover,
@@ -95,14 +217,14 @@ header {
   overflow: hidden;
 }
 
-@media only screen and (max-width: 600px) {
-  [data-search] {
-    display: none;
-  }
-}
+// @media only screen and (max-width: 600px) {
+//   [data-search] {
+//     display: none;
+//   }
+// }
 
-@media only screen and (max-width: 1000px) {
-  [data-signIn] {
-    display: none;
-  }
-}
+// @media only screen and (max-width: 1000px) {
+//   [data-signIn] {
+//     display: none;
+//   }
+// }
