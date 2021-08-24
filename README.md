@@ -16,17 +16,15 @@ layouts) I included only one or two examples of each card section.
 
 - src/index.html: Main and only output file. 
 - src/assets: Contains svg files as a reference to the inline ones used in **index.html**.
-- src/scss: All scss files
-
-
+- src/scss: All scss files.
 <br>
 <br>
 ### Features - finished product
 
-- Fully responsive and fluid layout 
-- Inline SVG's for all icons for quality on all screen sizes
-- Optimised images for browsers by using 'srcset' and 'sizes' attributes on <img> tags 
-- To avoid any [copyright issues with the BBC] I used a different font face than [BBC Reith]
+- Fully responsive and fluid layout. 
+- Inline SVG's for all icons for quality on all screen sizes.
+- Optimised images for browsers by using 'srcset' and 'sizes' attributes on <img> tags.
+- To avoid any [copyright issues with the BBC] I used a different font face than [BBC Reith].
 
 [copyright issues with the BBC]: https://www.bbc.co.uk/branding/reith-font
 [BBC Reith]: https://www.bbc.co.uk/gel/articles/introducing-bbc-reith
