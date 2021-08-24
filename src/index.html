@@ -552,7 +552,6 @@
     </footer>
   </body>
   <script>
-
 /* Script - Handles hide/show functionality of the navbar */
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -578,68 +577,19 @@ document.addEventListener('DOMContentLoaded', () => {
     hiddenNav.classList.remove('block')
     hiddenNav.classList.add('hidden')
   })
-  
-  /* Intersection Observer - Handles moving inner nav items to the hidden menu */
-  // const hiddenNavItems = hiddenNav.querySelectorAll('li')
-  // innerNav.querySelectorAll('li[data-index]').forEach(innerNavItem => {
-  //   let index = parseInt(innerNavItem.dataset.index);
-  //   if (innerNavItem.style.width < innerNavItem.style.flexBasis) {
-  //     innerNavItem.classList.add('hide-item') // hide main 
-  //     hiddenNavItems[index].style.display = 'block'; // show hidden
-  //   } else {
-  //     innerNavItem.classList.remove('hide-item') // show main
-  //       hiddenNavItems[index].style.display = 'none'; // hide hidden
-  //   }
-  // })
-  
-  // let options = {
-  //   root: mainNav,
-  //   rootMargin: "-20px 0px 0px 0px",
-  //   threshold: 0.98
-  // }
 
-  // let observer = new IntersectionObserver(handleWrapping, options)
+  /* Resize Observer - Handles menu - more text change  */
+  let resizer = new ResizeObserver(handleResize)
+  resizer.observe(mainNav)
 
-  // const mainNavItems = innerNav.querySelectorAll('li[data-index]')
-  // mainNavItems.forEach(mainNavItem => {
-  //   observer.observe(mainNavItem)
-  // })
-
-  // const hiddenNavItems = hiddenNav.querySelectorAll('li')
-
-  // function handleWrapping(mainNavItems, observer) {
-  //   mainNavItems.forEach(mainNavItem => {
-  //     let index = parseInt(mainNavItem.target.dataset.index);
-  //     if (mainNavItem.isIntersecting) {
-  //       mainNavItem.target.classList.add('hide-item') // hide main 
-  //       hiddenNavItems[index].style.display = 'block'; // show hidden
-  //     } else {
-  //       mainNavItem.target.classList.remove('hide-item') // show main
-  //       hiddenNavItems[index].style.display = 'none'; // hide hidden
-  //     }
-  //   })
-  // }
-
-  /* Resize Observer - Handles hiding nav text spans and notification bell icon  */
-
-//   let resizer = new ResizeObserver(handleResize)
-//   resizer.observe(mainNav)
-
-//   function handleResize(entries) {
-//     let mainNavContainer = entries[0].target
-//     if (entries[0].contentRect.width <= 350) {
-//       innerNav.childNodes[3].classList.add('hide-item')
-//     } else {
-//       innerNav.childNodes[3].classList.remove('hide-item')
-//     }
-//     if (entries[0].contentRect.width <= 420) {
-//       menuMore.querySelector('a span').textContent = 'Menu'
-//     } else {
-//       menuMore.querySelector('a span').textContent = 'More'
-//     }
-//   }
-
-})
-        
+  function handleResize(entries) {
+    let mainNavContainer = entries[0].target
+    if (entries[0].contentRect.width <= 550) {
+      menuMore.querySelector('a span').textContent = 'Menu'
+    } else {
+      menuMore.querySelector('a span').textContent = 'More'
+    }
+  }
+})   
   </script>
 </html>
