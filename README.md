@@ -23,11 +23,9 @@ npm start
 npm run build
 ```
 
-> `npm install` will install dependencies and create `node_modules` folder.
->
-> `npm start` will run the parcel development server on `localhost:1234`
->
-> `npm run build` will run the parcel build command, creating the `dist` folder and minifying the html and css.
+- `npm install` will install dependencies and create `node_modules` folder.
+- `npm start` will run the parcel development server on `localhost:1234`
+- `npm run build` will run the parcel build command, creating the `dist` folder and minifying the html and css.
 
 <br>
 
