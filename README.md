@@ -32,7 +32,6 @@ npm run build
 ## `src/` folder
 
 - `index.html` Main and only output file.
-- `assets/` Contains svg files and images as a reference to the inline ones used in `index.html`.
 - `scss/`
   - `abstracts/` Contains **Sass Maps** for the root colors and typography.
   - `base/` Contains the root styles, mostly derived from abstracts into utility classes and CSS Custom Properties.
