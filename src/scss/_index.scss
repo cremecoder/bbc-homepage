@@ -2,8 +2,8 @@
 @forward './abstracts/typography';
 @forward './base/root';
 @forward './components/navbar';
-@forward "./layout/main-content";
-@forward "./layout/footer";
+@forward "./components/main-content";
+@forward "./components/footer";
 @forward './components/container';
 @forward './components/grid';
 @forward './components/promo-card';
