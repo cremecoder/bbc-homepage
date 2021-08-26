@@ -49,7 +49,7 @@ npm run build
 
 <br>
 
-> ## Important
+> ### Important
 >
 > - This is a recreation of certain elements from the BBC Homepage. **I AM NOT in any way affiliated with the BBC or their development team.** This is a personal project to showcase my development skills, no more no less.
 > - To avoid any [copyright issues with the BBC] I used a different font face than [BBC Reith].
