@@ -2,7 +2,13 @@
 
 This repo contains the development files for my recreation of the **BBC Homepage** using just **HTML, CSS with Sass and a bit of javascript**.
 
-> Visit the live project **HERE** hosted on **PROVIDER**
+> Visit the live project **[here]**.
+
+<br>
+
+> ### Important
+>
+> **I AM NOT in any way affiliated with the BBC or their development team.** This is a personal project to showcase my development skills, no more no less.
 
 <br>
 
@@ -47,16 +53,4 @@ npm run build
 - Inline SVG's for all icons for quality on all screen sizes.
 - Optimised images for browsers by using 'srcset' and 'sizes' attributes on `<img>` tags.
 
-<br>
-
-> ### Important
->
-> - This is a recreation of certain elements from the BBC Homepage. **I AM NOT in any way affiliated with the BBC or their development team.** This is a personal project to showcase my development skills, no more no less.
-> - To avoid any [copyright issues with the BBC] I used a different font face than [BBC Reith].
-> - I have followed the [BBC's guidlines] when it comes to using their assets, and believe my project falls under [fair dealing] as defined in [The Copyright, Designs and Patents Act 1988].
-
-[copyright issues with the bbc]: https://www.bbc.co.uk/branding/reith-font
-[bbc reith]: https://www.bbc.co.uk/gel/articles/introducing-bbc-reith
-[fair dealing]: https://www.gov.uk/guidance/exceptions-to-copyright#fair-dealing
-[bbc's guidlines]: https://www.bbc.co.uk/branding/logo-use/student
-[the copyright, designs and patents act 1988]: https://www.legislation.gov.uk/ukpga/1988/48/section/29/1993-11-05?timeline=true
+[here]: https://vigilant-babbage-cfa8b1.netlify.app/
