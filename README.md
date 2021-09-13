@@ -1,6 +1,6 @@
 # BBC Homepage Recreation - A Frontend Project
 
-This repo contains the development files for my recreation of the **BBC Homepage** using just **HTML, CSS with Sass and a bit of javascript**.
+This repo contains the development files for my recreation of the **BBC Homepage** using just **HTML, CSS with Sass, and Javascript**.
 
 > Visit the live project **[here]**.
 
