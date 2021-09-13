@@ -2,7 +2,7 @@
 
 This repo contains the development files for my recreation of the **BBC Homepage** using just **HTML, CSS with Sass and a bit of javascript**.
 
-> Visit the live project <a href="https://vigilant-babbage-cfa8b1.netlify.app" target="_blank">**here**</a>
+> Visit the live project <a href="https://vigilant-babbage-cfa8b1.netlify.app" target="blank">**here**</a>
 
 <br>
 
