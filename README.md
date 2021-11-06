@@ -14,7 +14,7 @@ This repo contains the development files for my recreation of the **BBC Homepage
 
 ## Why did I choose to do this project?
 
-I wanted to showcase my ability to code a **frontend without the use of frameworks**. I chose the BBC homepage because of its unique navigation
+I wanted to showcase my ability to code a **frontend a follow a design**. I chose the BBC homepage because of its unique navigation
 bar and interesting card layout for it's featured news articles. Because the BBC homepage has some identical and repeating features, (such as the card layouts) I included only one or two examples of each card section. Makes use of SASS maps and loops, also the Javascript ResizeObserver API.
 
 <br>
@@ -39,9 +39,9 @@ npm run build
 
 - `index.html` Main and only output file.
 - `scss/`
-  - `abstracts/` Contains **Sass Maps** for the root colors and typography.
-  - `base/` Contains the root styles, mostly derived from abstracts into utility classes and CSS Custom Properties.
-  - `components/` Styles scoped to individual components like the navbar, grid layout for the cards etc.
+  - `abstracts/*` Contains **Sass Maps** for the root colors and typography.
+  - `base/*` Contains the root styles, mostly derived from abstracts into utility classes and CSS Custom Properties.
+  - `components/*` Styles scoped to individual components like the navbar, grid layout for the cards etc.
   - `_index.scss` Directory file. All scss files are forwarded from here.
   - `main.scss` Main output file from which the **Sass** is compiled into **minified CSS**.
 
